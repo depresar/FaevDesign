@@ -74,12 +74,14 @@ document.querySelectorAll('.counter').forEach((el) => counterObserver.observe(el
 
 // ---------- Параллакс главного экрана, фото и бегущая строка ----------
 const header = document.getElementById('header');
-const hero = document.querySelector('.hero');
+// Элементы главного экрана есть не на всех вариантах страницы — отсутствующие пропускаем
+const hero = document.querySelector('.hero, .hero2');
 const heroPerson = document.getElementById('heroPerson');
 const heroBadge = document.getElementById('heroBadge');
 const heroLeft = document.querySelector('.hero__word--left');
 const heroRight = document.querySelector('.hero__word--right');
-const heroBottom = document.querySelector('.hero__bottom');
+const heroBottom = document.querySelector('.hero__bottom, .hero2__bottom');
+const speedEls = document.querySelectorAll('[data-speed]');
 const parallaxImgs = document.querySelectorAll('[data-parallax]');
 const marquees = [...document.querySelectorAll('[data-marquee]')].map((row) => {
     row.innerHTML += row.innerHTML; // дублируем содержимое для бесконечной прокрутки
@@ -94,18 +96,23 @@ function onFrame() {
     const y = window.scrollY;
     const vh = window.innerHeight;
 
-    // Шапка: после главного экрана прячем почту и кнопку
-    header.classList.toggle('is-compact', y > hero.offsetHeight * 0.6);
+    // Шапка: после главного экрана прячем почту и кнопку (вариант 2 — сразу затемняем фон)
+    const compactAt = header.classList.contains('header2') ? 40 : hero.offsetHeight * 0.6;
+    header.classList.toggle('is-compact', y > compactAt);
 
     if (!reduceMotion) {
         // Главный экран: слова разъезжаются, фото приближается, бейдж поворачивается
         const p = clamp(y / vh, 0, 1);
         if (p < 1) {
-            heroLeft.style.transform = `translateX(${-p * 18}vw)`;
-            heroRight.style.transform = `translateX(${p * 18}vw)`;
-            heroPerson.style.transform = `translateY(${p * 8}%) scale(${1 + p * 0.12})`;
-            heroBadge.style.transform = `rotate(${p * 120}deg) scale(${1 + p * 0.3})`;
-            heroBottom.style.opacity = 1 - p * 1.6;
+            if (heroLeft) heroLeft.style.transform = `translateX(${-p * 18}vw)`;
+            if (heroRight) heroRight.style.transform = `translateX(${p * 18}vw)`;
+            if (heroPerson) heroPerson.style.transform = `translateY(${p * 8}%) scale(${1 + p * 0.12})`;
+            if (heroBadge) heroBadge.style.transform = `rotate(${p * 120}deg) scale(${1 + p * 0.3})`;
+            if (heroBottom) heroBottom.style.opacity = 1 - p * 1.6;
+            // Слои с data-speed отстают от скролла (чем больше число, тем медленнее)
+            speedEls.forEach((el) => {
+                el.style.transform = `translateY(${y * el.dataset.speed}px)`;
+            });
         }
 
         // Фото «Обо мне» двигается медленнее страницы
