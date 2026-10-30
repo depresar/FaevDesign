@@ -161,7 +161,7 @@ const cursorTag = document.getElementById('cursorTag');
 let cursorX = 0, cursorY = 0, tagX = 0, tagY = 0;
 
 if (window.matchMedia('(hover: hover)').matches) {
-    document.querySelectorAll('.case').forEach((card) => {
+    document.querySelectorAll('a.case').forEach((card) => {
         card.addEventListener('mouseenter', () => cursorTag.classList.add('is-visible'));
         card.addEventListener('mouseleave', () => cursorTag.classList.remove('is-visible'));
     });
@@ -179,7 +179,7 @@ if (window.matchMedia('(hover: hover)').matches) {
         requestAnimationFrame(moveTag);
     })();
 } else {
-    document.querySelectorAll('.case').forEach((card) => { card.style.cursor = 'pointer'; });
+    document.querySelectorAll('a.case').forEach((card) => { card.style.cursor = 'pointer'; });
 }
 
 // ---------- FAQ ----------
