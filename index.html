@@ -56,23 +56,25 @@
                 <span class="hero__blob hero__blob--3"></span>
             </div>
 
-            <!-- Центральный элемент: тёмная сфера, вращающийся круг с текстом и знак -->
-            <div class="hero__visual" id="heroVisual">
-                <div class="orb">
-                    <div class="orb__ring"></div>
-                    <svg class="orb__text" viewBox="0 0 200 200" aria-hidden="true">
-                        <defs>
-                            <path id="circlePath" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/>
-                        </defs>
-                        <text><textPath href="#circlePath">веб-дизайн • tilda zero block • figma • frontend • </textPath></text>
-                    </svg>
-                    <svg class="orb__dash" viewBox="0 0 200 200" aria-hidden="true">
-                        <circle cx="100" cy="100" r="54"/>
-                    </svg>
-                    <svg class="orb__mark" viewBox="0 0 64 64" aria-hidden="true">
-                        <path d="M22 8h40l-5 12H34l-3 8h20l-5 12H26l-7 18H2z"/>
-                    </svg>
-                </div>
+            <!-- Фото по центру -->
+            <div class="hero__person" id="heroPerson">
+                <img src="img/ivan-hero.webp" alt="Иван Фаев" fetchpriority="high">
+            </div>
+
+            <!-- Вращающийся бейдж -->
+            <div class="hero__badge" id="heroBadge" aria-hidden="true">
+                <svg class="badge__text" viewBox="0 0 200 200">
+                    <defs>
+                        <path id="circlePath" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/>
+                    </defs>
+                    <text><textPath href="#circlePath">веб-дизайн • tilda zero block • figma • frontend • </textPath></text>
+                </svg>
+                <svg class="badge__dash" viewBox="0 0 200 200">
+                    <circle cx="100" cy="100" r="54"/>
+                </svg>
+                <svg class="badge__mark" viewBox="0 0 64 64">
+                    <path d="M22 8h40l-5 12H34l-3 8h20l-5 12H26l-7 18H2z"/>
+                </svg>
             </div>
 
             <h1 class="hero__title" aria-label="Faev Design">
@@ -132,71 +134,109 @@
             <div class="container">
                 <div class="works__head">
                     <h2 class="h2" data-reveal>Создаю сайты, которые выделяются и&nbsp;продают</h2>
-                    <p class="muted works__desc" data-reveal data-delay="1">Подборка последних проектов: корпоративные сайты, лендинги и интернет-магазины. Наведите на карточку, чтобы пролистать первые экраны. У каждого — своя идея, характер и визуальная система.</p>
+                    <p class="muted works__desc" data-reveal data-delay="1">Подборка последних проектов: корпоративные сайты, лендинги и интернет-магазины. Наведите на проект, чтобы пролистать его первые экраны. У каждого — своя идея, характер и визуальная система.</p>
                 </div>
 
                 <!--
-                    Как добавить кейс: скопируйте блок <a class="case">…</a>,
-                    поменяйте ссылку, картинку и подписи. Если у проекта нет
-                    ссылки — используйте <div class="case"> вместо <a>.
-                    Классы размера: case--sm (узкий) и case--lg (широкий),
-                    case--offset сдвигает карточку вниз.
+                    Как добавить кейс: скопируйте блок <article class="case">…</article>,
+                    поменяйте картинку, название, тип и год.
+                    Размеры: case--full (на всю ширину), case--lg (широкий),
+                    case--sm (средний), case--xs (узкий); case--offset сдвигает карточку вниз.
+                    В одной строке сумма колонок = 12: full; lg + sm; xs + текст + xs.
                     Скриншоты кладите в img/cases/ (лучше в формате .webp).
                 -->
                 <div class="works__grid">
-                    <a href="https://prodesign-buro.ru" target="_blank" rel="noopener" class="case case--sm" data-reveal>
-                        <div class="case__media"><img src="img/cases/prodesign.webp" alt="ПРО.Дизайн Бюро" loading="lazy"></div>
-                        <div class="case__info"><span>ПРО.Дизайн Бюро <em>(дизайн интерьера)</em></span><span class="case__num">01</span></div>
-                    </a>
-                    <a href="https://авенюбэнд.рф" target="_blank" rel="noopener" class="case case--lg" data-reveal>
-                        <div class="case__media"><img src="img/cases/avenue.webp" alt="AVENUE BAND" loading="lazy"></div>
-                        <div class="case__info"><span>AVENUE BAND <em>(кавер-группа)</em></span><span class="case__num">02</span></div>
-                    </a>
+                    <article class="case case--full" data-reveal>
+                        <div class="case__media" style="--tint: #2b2723"><img src="img/cases/prodesign.webp" alt="ПРО.Дизайн Бюро — студия дизайна интерьера" loading="lazy"></div>
+                        <div class="case__info">
+                            <span><i class="case__num">01</i>ПРО.Дизайн Бюро <em>(студия дизайна интерьера)</em></span>
+                            <span>Год <em>(2025)</em></span>
+                        </div>
+                    </article>
 
-                    <a href="https://shapesbygaia.com" target="_blank" rel="noopener" class="case case--lg" data-reveal>
-                        <div class="case__media"><img src="img/cases/shapes.webp" alt="Shapes by Gaia" loading="lazy"></div>
-                        <div class="case__info"><span>Shapes by Gaia <em>(авторская керамика)</em></span><span class="case__num">03</span></div>
-                    </a>
-                    <div class="case case--sm case--offset" data-reveal>
-                        <div class="case__media"><img src="img/cases/grankina.webp" alt="Юлия Гранкина" loading="lazy"></div>
-                        <div class="case__info"><span>Юлия Гранкина <em>(художник)</em></span><span class="case__num">04</span></div>
-                    </div>
+                    <article class="case case--sm" data-reveal>
+                        <div class="case__media"><img src="img/cases/avenue.webp" alt="AVENUE BAND — кавер-группа" loading="lazy"></div>
+                        <div class="case__info">
+                            <span><i class="case__num">02</i>AVENUE BAND <em>(кавер-группа)</em></span>
+                            <span>Год <em>(2025)</em></span>
+                        </div>
+                    </article>
+                    <article class="case case--lg" data-reveal>
+                        <div class="case__media"><img src="img/cases/shapes.webp" alt="Shapes by Gaia — бренд авторской керамики" loading="lazy"></div>
+                        <div class="case__info">
+                            <span><i class="case__num">03</i>Shapes by Gaia <em>(бренд авторской керамики)</em></span>
+                            <span>Год <em>(2024)</em></span>
+                        </div>
+                    </article>
 
-                    <a href="https://legallionsgroup.ru" target="_blank" rel="noopener" class="case case--sm case--offset" data-reveal>
-                        <div class="case__media"><img src="img/cases/lions.webp" alt="Юр. группа «ЛЬВЫ»" loading="lazy"></div>
-                        <div class="case__info"><span>Юр. группа «ЛЬВЫ» <em>(юридические услуги)</em></span><span class="case__num">05</span></div>
-                    </a>
-                    <div class="case case--lg" data-reveal>
-                        <div class="case__media"><img src="img/cases/vdoh.webp" alt="ВДох" loading="lazy"></div>
-                        <div class="case__info"><span>ВДох <em>(керамика ручной работы)</em></span><span class="case__num">06</span></div>
-                    </div>
+                    <article class="case case--xs" data-reveal>
+                        <div class="case__media"><img src="img/cases/grankina.webp" alt="Юлия Гранкина — художник, интерьерные картины" loading="lazy"></div>
+                        <div class="case__info">
+                            <span><i class="case__num">04</i>Юлия Гранкина <em>(художник, интерьерные картины)</em></span>
+                            <span>Год <em>(2026)</em></span>
+                        </div>
+                    </article>
+                    <p class="works__note muted" data-reveal>Каждый проект начинается с идеи. Дальше я ищу правильную форму — через смысл, визуальный язык, структуру и детали.</p>
+                    <article class="case case--xs case--offset" data-reveal>
+                        <div class="case__media"><img src="img/cases/lions.webp" alt="Юр. группа «ЛЬВЫ» — юридическое агентство" loading="lazy"></div>
+                        <div class="case__info">
+                            <span><i class="case__num">05</i>Юр. группа «ЛЬВЫ» <em>(юридическое агентство)</em></span>
+                            <span>Год <em>(2024)</em></span>
+                        </div>
+                    </article>
 
-                    <a href="https://rakovar64.ru" target="_blank" rel="noopener" class="case case--lg" data-reveal>
-                        <div class="case__media"><img src="img/cases/rakovar.webp" alt="Rakovar64" loading="lazy"></div>
-                        <div class="case__info"><span>Rakovar64 <em>(магазин морепродуктов)</em></span><span class="case__num">07</span></div>
-                    </a>
-                    <div class="case case--sm" data-reveal>
-                        <div class="case__media"><img src="img/cases/myflo.webp" alt="Myflo Ceramics" loading="lazy"></div>
-                        <div class="case__info"><span>Myflo Ceramics <em>(магазин керамики)</em></span><span class="case__num">08</span></div>
-                    </div>
+                    <article class="case case--full" data-reveal>
+                        <div class="case__media" style="--tint: #d9e2ea"><img src="img/cases/vdoh.webp" alt="ВДох — керамика ручной работы" loading="lazy"></div>
+                        <div class="case__info">
+                            <span><i class="case__num">06</i>ВДох <em>(керамика ручной работы)</em></span>
+                            <span>Год <em>(2026)</em></span>
+                        </div>
+                    </article>
 
-                    <a href="http://kravchenkoa.ru" target="_blank" rel="noopener" class="case case--sm" data-reveal>
-                        <div class="case__media"><img src="img/cases/kravchenko.webp" alt="Анастасия Кравченко" loading="lazy"></div>
-                        <div class="case__info"><span>Анастасия Кравченко <em>(психолог)</em></span><span class="case__num">09</span></div>
-                    </a>
-                    <div class="case case--lg" data-reveal>
-                        <div class="case__media"><img src="img/cases/livegold.webp" alt="Live Gold" loading="lazy"></div>
-                        <div class="case__info"><span>Live Gold <em>(сыродавленные масла)</em></span><span class="case__num">10</span></div>
-                    </div>
+                    <article class="case case--lg" data-reveal>
+                        <div class="case__media"><img src="img/cases/rakovar.webp" alt="Rakovar64 — магазин морепродуктов" loading="lazy"></div>
+                        <div class="case__info">
+                            <span><i class="case__num">07</i>Rakovar64 <em>(магазин морепродуктов)</em></span>
+                            <span>Год <em>(2024)</em></span>
+                        </div>
+                    </article>
+                    <article class="case case--sm case--offset" data-reveal>
+                        <div class="case__media"><img src="img/cases/myflo.webp" alt="Myflo Ceramics — магазин керамики" loading="lazy"></div>
+                        <div class="case__info">
+                            <span><i class="case__num">08</i>Myflo Ceramics <em>(магазин керамики)</em></span>
+                            <span>Год <em>(2025)</em></span>
+                        </div>
+                    </article>
 
-                    <a href="http://distrclean.ru" target="_blank" rel="noopener" class="case case--lg" data-reveal>
-                        <div class="case__media"><img src="img/cases/distrclean.webp" alt="ООО «Дистрклин»" loading="lazy"></div>
-                        <div class="case__info"><span>ООО «Дистрклин» <em>(профессиональная химия)</em></span><span class="case__num">11</span></div>
-                    </a>
-                    <div class="case case--sm case--offset" data-reveal>
-                        <div class="case__media"><img src="img/cases/mugs.webp" alt="Mugs & Kisses" loading="lazy"></div>
-                        <div class="case__info"><span>Mugs &amp; Kisses <em>(фарфоровая посуда)</em></span><span class="case__num">12</span></div>
-                    </div>
+                    <article class="case case--sm" data-reveal>
+                        <div class="case__media"><img src="img/cases/kravchenko.webp" alt="Анастасия Кравченко — психолог" loading="lazy"></div>
+                        <div class="case__info">
+                            <span><i class="case__num">09</i>Анастасия Кравченко <em>(психолог)</em></span>
+                            <span>Год <em>(2025)</em></span>
+                        </div>
+                    </article>
+                    <article class="case case--lg" data-reveal>
+                        <div class="case__media"><img src="img/cases/livegold.webp" alt="Золото жизни — магазин сыродавленных масел" loading="lazy"></div>
+                        <div class="case__info">
+                            <span><i class="case__num">10</i>Золото жизни <em>(магазин сыродавленных масел)</em></span>
+                            <span>Год <em>(2026)</em></span>
+                        </div>
+                    </article>
+
+                    <article class="case case--lg" data-reveal>
+                        <div class="case__media"><img src="img/cases/distrclean.webp" alt="ООО «Дистрклин» — профессиональная химия" loading="lazy"></div>
+                        <div class="case__info">
+                            <span><i class="case__num">11</i>ООО «Дистрклин» <em>(профессиональная химия)</em></span>
+                            <span>Год <em>(2024)</em></span>
+                        </div>
+                    </article>
+                    <article class="case case--sm case--offset" data-reveal>
+                        <div class="case__media"><img src="img/cases/mugs.webp" alt="Mugs & Kisses — фарфоровая посуда" loading="lazy"></div>
+                        <div class="case__info">
+                            <span><i class="case__num">12</i>Mugs &amp; Kisses <em>(фарфоровая посуда)</em></span>
+                            <span>Год <em>(2026)</em></span>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -328,8 +368,8 @@
         </section>
     </main>
 
-    <!-- Курсор «Смотреть» при наведении на кейс -->
-    <div class="cursor-tag" id="cursorTag">Смотреть ↗</div>
+    <!-- Курсор-подсказка при наведении на кейс -->
+    <div class="cursor-tag" id="cursorTag">Листаем ↓</div>
 
     <!-- ========== ОКНО ЗАЯВКИ ========== -->
     <div class="modal" id="modal" aria-hidden="true">

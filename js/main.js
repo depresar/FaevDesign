@@ -75,7 +75,8 @@ document.querySelectorAll('.counter').forEach((el) => counterObserver.observe(el
 // ---------- Параллакс главного экрана, фото и бегущая строка ----------
 const header = document.getElementById('header');
 const hero = document.querySelector('.hero');
-const heroVisual = document.getElementById('heroVisual');
+const heroPerson = document.getElementById('heroPerson');
+const heroBadge = document.getElementById('heroBadge');
 const heroLeft = document.querySelector('.hero__word--left');
 const heroRight = document.querySelector('.hero__word--right');
 const heroBottom = document.querySelector('.hero__bottom');
@@ -97,12 +98,13 @@ function onFrame() {
     header.classList.toggle('is-compact', y > hero.offsetHeight * 0.6);
 
     if (!reduceMotion) {
-        // Главный экран: слова разъезжаются, сфера растёт и поворачивается
+        // Главный экран: слова разъезжаются, фото приближается, бейдж поворачивается
         const p = clamp(y / vh, 0, 1);
         if (p < 1) {
             heroLeft.style.transform = `translateX(${-p * 18}vw)`;
             heroRight.style.transform = `translateX(${p * 18}vw)`;
-            heroVisual.style.transform = `scale(${1 + p * 0.5}) rotate(${p * 25}deg)`;
+            heroPerson.style.transform = `translateY(${p * 8}%) scale(${1 + p * 0.12})`;
+            heroBadge.style.transform = `rotate(${p * 120}deg) scale(${1 + p * 0.3})`;
             heroBottom.style.opacity = 1 - p * 1.6;
         }
 
@@ -156,12 +158,12 @@ document.addEventListener('click', (e) => {
     if (!navPill.contains(e.target)) toggleMenu(false);
 });
 
-// ---------- Курсор «Смотреть» на кейсах ----------
+// ---------- Курсор-подсказка на кейсах ----------
 const cursorTag = document.getElementById('cursorTag');
 let cursorX = 0, cursorY = 0, tagX = 0, tagY = 0;
 
 if (window.matchMedia('(hover: hover)').matches) {
-    document.querySelectorAll('a.case').forEach((card) => {
+    document.querySelectorAll('.case').forEach((card) => {
         card.addEventListener('mouseenter', () => cursorTag.classList.add('is-visible'));
         card.addEventListener('mouseleave', () => cursorTag.classList.remove('is-visible'));
     });
@@ -179,7 +181,7 @@ if (window.matchMedia('(hover: hover)').matches) {
         requestAnimationFrame(moveTag);
     })();
 } else {
-    document.querySelectorAll('a.case').forEach((card) => { card.style.cursor = 'pointer'; });
+    document.querySelectorAll('.case').forEach((card) => { card.style.cursor = 'auto'; });
 }
 
 // ---------- FAQ ----------
