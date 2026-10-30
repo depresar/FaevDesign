@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faev Design — веб-дизайн и разработка сайтов | Иван Фаев</title>
+    <meta name="description" content="Иван Фаев — веб-дизайнер. Дизайн сайтов в Figma, вёрстка на Tilda (Zero Block) и frontend-разработка.">
+    <meta name="theme-color" content="#ff5a00">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ========== ШАПКА ========== -->
+    <header class="header" id="header">
+        <a href="mailto:faev98@gmail.com" class="header__mail">faev98@gmail.com</a>
+
+        <div class="nav-pill" id="navPill">
+            <div class="nav-pill__bar">
+                <a href="#top" class="nav-pill__logo">Faev Design<sup>®</sup></a>
+                <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+            <div class="nav-pill__menu">
+                <nav class="nav-pill__inner">
+                    <a href="#about" class="nav-pill__link"><span>01</span>Обо мне</a>
+                    <a href="#works" class="nav-pill__link"><span>02</span>Работы</a>
+                    <a href="#services" class="nav-pill__link"><span>03</span>Услуги</a>
+                    <a href="#faq" class="nav-pill__link"><span>04</span>Вопросы</a>
+                    <a href="#contact" class="nav-pill__link"><span>05</span>Контакты</a>
+                    <div class="nav-pill__socials">
+                        <a href="https://t.me/iwebdsgn" target="_blank" rel="noopener">Telegram</a>
+                        <a href="https://wa.me/998507590368" target="_blank" rel="noopener">WhatsApp</a>
+                        <a href="https://www.instagram.com/dsgn.faev/" target="_blank" rel="noopener">Instagram</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <button class="btn btn--outline header__cta" data-open-form>
+            Обсудить проект <i class="arrow">↗</i>
+        </button>
+    </header>
+
+    <main>
+        <!-- ========== ГЛАВНЫЙ ЭКРАН ========== -->
+        <section class="hero" id="top">
+            <div class="hero__bg">
+                <span class="hero__blob hero__blob--1"></span>
+                <span class="hero__blob hero__blob--2"></span>
+                <span class="hero__blob hero__blob--3"></span>
+            </div>
+
+            <!-- Центральный элемент: тёмная сфера, вращающийся круг с текстом и знак -->
+            <div class="hero__visual" id="heroVisual">
+                <div class="orb">
+                    <div class="orb__ring"></div>
+                    <svg class="orb__text" viewBox="0 0 200 200" aria-hidden="true">
+                        <defs>
+                            <path id="circlePath" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/>
+                        </defs>
+                        <text><textPath href="#circlePath">веб-дизайн • tilda zero block • figma • frontend • </textPath></text>
+                    </svg>
+                    <svg class="orb__dash" viewBox="0 0 200 200" aria-hidden="true">
+                        <circle cx="100" cy="100" r="54"/>
+                    </svg>
+                    <svg class="orb__mark" viewBox="0 0 64 64" aria-hidden="true">
+                        <path d="M22 8h40l-5 12H34l-3 8h20l-5 12H26l-7 18H2z"/>
+                    </svg>
+                </div>
+            </div>
+
+            <h1 class="hero__title" aria-label="Faev Design">
+                <span class="hero__word hero__word--left"><span class="mask"><span>Faev<sup>®</sup></span></span></span>
+                <span class="hero__word hero__word--right"><span class="mask"><span>Design</span></span></span>
+            </h1>
+
+            <div class="hero__bottom">
+                <p class="hero__lead">
+                    <span class="mask"><span>Веб-дизайн, сайты на Tilda</span></span>
+                    <span class="mask"><span>Zero Block и frontend-</span></span>
+                    <span class="mask"><span>разработка</span></span>
+                </p>
+                <div class="hero__aside">
+                    <div class="status"><i class="status__dot"></i>Открыт для проектов на 2026 год</div>
+                    <p>Создаю сайты, которые работают и впечатляют: продуманные интерфейсы, качественный код и плавная анимация.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== МАНИФЕСТ + ЦИФРЫ ========== -->
+        <section class="intro section" id="about">
+            <div class="container">
+                <p class="intro__text" data-haze>
+                    Я верю, что у каждого бизнеса есть свой характер и свой способ быть заметным. Поэтому проектирую чистые интерфейсы, рисую дизайн в Figma и собираю сайты на Tilda и в коде — так, чтобы они работали и впечатляли.
+                </p>
+
+                <div class="intro__grid">
+                    <div class="intro__col" data-reveal>
+                        <span class="square"></span>
+                        <p class="muted">Без лишнего шума и сложных решений. Сильная идея, аккуратный дизайн и внимание к тому, что действительно важно.</p>
+                    </div>
+                    <div class="intro__col" data-reveal data-delay="1">
+                        <h3>Дизайн и вёрстка в одних руках</h3>
+                        <p class="muted">Сам рисую макет в Figma и сам собираю его на Tilda или в коде — ничего не теряется при передаче между подрядчиками.</p>
+                        <div class="stat">
+                            <span class="stat__num"><span class="counter" data-target="5">0</span>+</span>
+                            <span class="stat__label muted">лет в веб-дизайне и всё ещё интересно</span>
+                        </div>
+                        <button class="link-arrow" data-open-form>Обсудить проект <i class="arrow">↗</i></button>
+                    </div>
+                    <div class="intro__col" data-reveal data-delay="2">
+                        <h3>Мне доверяют свои идеи</h3>
+                        <p class="muted">От лендинга, который нужно запустить быстро, до многостраничного сайта, где дизайн становится частью стратегии бизнеса.</p>
+                        <div class="stat">
+                            <span class="stat__num"><span class="counter" data-target="100">0</span>+</span>
+                            <span class="stat__label muted">проектов запущено</span>
+                        </div>
+                        <span class="intro__copy">©2026</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== КЕЙСЫ ========== -->
+        <section class="works section" id="works">
+            <div class="container">
+                <div class="works__head">
+                    <h2 class="h2" data-reveal>Создаю сайты, которые выделяются и&nbsp;продают</h2>
+                    <p class="muted works__desc" data-reveal data-delay="1">Подборка последних проектов: корпоративные сайты, лендинги и интернет-магазины. У каждого — своя идея, характер и визуальная система.</p>
+                </div>
+
+                <!--
+                    Как добавить кейс: скопируйте блок <a class="case">…</a>,
+                    поменяйте ссылку, картинку и подписи.
+                    Классы размера: case--sm (узкий) и case--lg (широкий).
+                -->
+                <div class="works__grid">
+                    <a href="https://prodesign-buro.ru" target="_blank" rel="noopener" class="case case--sm" data-reveal>
+                        <div class="case__media"><img src="https://www.dropbox.com/scl/fi/tp9qlbtrwppuaoj9i4j0i/2026-09-26-19.21.40.png?rlkey=998l0tuufvuaya40dp208szaq&st=xfsciasc&raw=1" alt="ПРО.Дизайн Бюро" loading="lazy"></div>
+                        <div class="case__info"><span>ПРО.Дизайн Бюро <em>(prodesign-buro.ru)</em></span><span class="case__num">01</span></div>
+                    </a>
+                    <a href="http://distrclean.ru" target="_blank" rel="noopener" class="case case--lg" data-reveal>
+                        <div class="case__media"><img src="https://www.dropbox.com/scl/fi/cvu4tq273qv325681knl9/2026-09-26-19.21.25.png?rlkey=gehdb159dsex6f4xbpv9fy1wb&st=o12si4ry&raw=1" alt="ООО «Дистрклин»" loading="lazy"></div>
+                        <div class="case__info"><span>ООО «Дистрклин» <em>(distrclean.ru)</em></span><span class="case__num">02</span></div>
+                    </a>
+
+                    <a href="https://rakovar64.ru" target="_blank" rel="noopener" class="case case--lg" data-reveal>
+                        <div class="case__media"><img src="https://www.dropbox.com/scl/fi/mogov3pak4ys327gajzwt/2026-09-26-19.21.03.png?rlkey=9slt75lle9ome35rotc4828nv&st=bwsrhh63&raw=1" alt="Rakovar64" loading="lazy"></div>
+                        <div class="case__info"><span>Rakovar64 <em>(rakovar64.ru)</em></span><span class="case__num">03</span></div>
+                    </a>
+                    <a href="https://авенюбэнд.рф" target="_blank" rel="noopener" class="case case--sm case--offset" data-reveal>
+                        <div class="case__media"><img src="https://www.dropbox.com/scl/fi/mhlt4qg92qzht1rdfm0w0/2026-09-26-19.20.39.png?rlkey=6wpenif3r0br5q3m2hh4s1pbz&st=mp3np2z6&raw=1" alt="AVENUE BAND" loading="lazy"></div>
+                        <div class="case__info"><span>AVENUE BAND <em>(авенюбэнд.рф)</em></span><span class="case__num">04</span></div>
+                    </a>
+
+                    <a href="http://kravchenkoa.ru" target="_blank" rel="noopener" class="case case--sm case--offset" data-reveal>
+                        <div class="case__media"><img src="https://www.dropbox.com/scl/fi/z16z6fofe71gv1yj6wvf9/2026-09-26-19.19.46.png?rlkey=sa0uztfsrqrtrw2e7okcex93w&st=2mtnf6b7&raw=1" alt="Kravchenko A." loading="lazy"></div>
+                        <div class="case__info"><span>Kravchenko A. <em>(kravchenkoa.ru)</em></span><span class="case__num">05</span></div>
+                    </a>
+                    <a href="https://legallionsgroup.ru" target="_blank" rel="noopener" class="case case--lg" data-reveal>
+                        <div class="case__media"><img src="https://www.dropbox.com/scl/fi/byqubwg9vwi9vjvrest50/2026-09-26-19.19.16.png?rlkey=y6pwp17bdkvle6ut9dq9r3wm8&st=oazeefa9&raw=1" alt="Юридическая группа «ЛЬВЫ»" loading="lazy"></div>
+                        <div class="case__info"><span>Юр. группа «ЛЬВЫ» <em>(legallionsgroup.ru)</em></span><span class="case__num">06</span></div>
+                    </a>
+
+                    <a href="https://shapesbygaia.com" target="_blank" rel="noopener" class="case case--lg" data-reveal>
+                        <div class="case__media"><img src="https://www.dropbox.com/scl/fi/rerzsokjuyuwlinjeryg3/2026-09-26-19.18.49.png?rlkey=6fdo7kl7fqgpdvaez5k75cl25&st=9ij064vc&raw=1" alt="Shapes by Gaia" loading="lazy"></div>
+                        <div class="case__info"><span>Shapes by Gaia <em>(shapesbygaia.com)</em></span><span class="case__num">07</span></div>
+                    </a>
+                    <a href="https://ronix-jewelry.ru" target="_blank" rel="noopener" class="case case--sm" data-reveal>
+                        <div class="case__media"><img src="https://www.dropbox.com/scl/fi/gimr1zvi03nkb0qmzf1cc/2026-09-26-19.18.26.png?rlkey=9nj6bv3r44jksfu5vvb8rvbpn&st=2wgy3ypq&raw=1" alt="Ronix Jewelry" loading="lazy"></div>
+                        <div class="case__info"><span>Ronix Jewelry <em>(ronix-jewelry.ru)</em></span><span class="case__num">08</span></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== БЕГУЩАЯ СТРОКА ========== -->
+        <section class="marquee" aria-hidden="true">
+            <div class="marquee__row" data-marquee="1">
+                <span>Веб-дизайн</span><i>✦</i><span>Tilda Zero Block</span><i>✦</i><span>Figma</span><i>✦</i><span>Frontend</span><i>✦</i><span>Анимации</span><i>✦</i>
+            </div>
+            <div class="marquee__row marquee__row--outline" data-marquee="-1">
+                <span>UI / UX</span><i>✦</i><span>Лендинги</span><i>✦</i><span>Корпоративные сайты</span><i>✦</i><span>Интернет-магазины</span><i>✦</i>
+            </div>
+        </section>
+
+        <!-- ========== ОБО МНЕ ========== -->
+        <section class="about section">
+            <div class="container about__grid">
+                <div class="about__photo" data-reveal>
+                    <img src="https://www.dropbox.com/scl/fi/ctwwjvacy6iu6288y6rds/20250217-432A5264.jpg?rlkey=u8m1dyhn5lodkg0awp6b0udlf&st=ldxqjuw9&raw=1" alt="Иван Фаев" loading="lazy" data-parallax>
+                </div>
+                <div class="about__text">
+                    <span class="label" data-reveal>(Обо мне)</span>
+                    <h2 class="h2" data-reveal>Привет, я Иван Фаев</h2>
+                    <p class="about__p" data-haze>Специализируюсь на продуманном веб-дизайне и вёрстке, проектирую интуитивно понятные и чистые интерфейсы.</p>
+                    <p class="about__p" data-haze>Собираю нестандартные проекты на Tilda, включая сложные анимации в Zero Block, CSS и JS, и разрабатываю сайты с помощью кода. Макеты рисую индивидуально в Figma под конкретные задачи бизнеса.</p>
+                    <p class="about__p" data-haze>Постоянно живу в разных странах — это даёт не просто насмотренность, а непрерывный поиск новых нестандартных решений.</p>
+                    <ul class="tags" data-reveal>
+                        <li>Figma</li><li>Tilda Zero Block</li><li>HTML / CSS / JS</li><li>Анимации</li><li>Адаптив</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== УСЛУГИ ========== -->
+        <section class="services section" id="services">
+            <div class="container">
+                <div class="services__head">
+                    <span class="label" data-reveal>(Форматы работы)</span>
+                    <h2 class="h2" data-reveal>Что я могу для вас сделать</h2>
+                </div>
+
+                <div class="services__list">
+                    <article class="service" data-reveal>
+                        <span class="service__num">01</span>
+                        <h3 class="service__title">UI/UX дизайн</h3>
+                        <ul class="service__list">
+                            <li>Проектирование логики</li>
+                            <li>Индивидуальный дизайн в Figma</li>
+                            <li>Десктоп и мобильная версии</li>
+                            <li>Подготовка макетов к вёрстке</li>
+                        </ul>
+                        <span class="service__price">от $200</span>
+                    </article>
+                    <article class="service" data-reveal>
+                        <span class="service__num">02</span>
+                        <h3 class="service__title">Вёрстка на Tilda / кодинг</h3>
+                        <ul class="service__list">
+                            <li>Перенос дизайна на платформу</li>
+                            <li>Сложная анимация (Zero Block)</li>
+                            <li>Интеграция кастомного кода</li>
+                            <li>Адаптация под все устройства</li>
+                        </ul>
+                        <span class="service__price">от $350</span>
+                    </article>
+                    <article class="service service--accent" data-reveal>
+                        <span class="service__num">03</span>
+                        <h3 class="service__title">Сайт под ключ</h3>
+                        <ul class="service__list">
+                            <li>Анализ и структура (UX)</li>
+                            <li>Уникальный дизайн интерфейса</li>
+                            <li>Frontend-разработка / Tilda</li>
+                            <li>Подключение домена и сервисов</li>
+                        </ul>
+                        <span class="service__price">от $550</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== FAQ ========== -->
+        <section class="faq section" id="faq">
+            <div class="container faq__grid">
+                <div>
+                    <span class="label" data-reveal>(Вопросы)</span>
+                    <h2 class="h2" data-reveal>Частые вопросы</h2>
+                </div>
+                <div class="faq__list">
+                    <div class="faq__item" data-reveal>
+                        <button class="faq__q">Как происходит оплата? <span class="faq__icon"></span></button>
+                        <div class="faq__a"><p>Работа делится на этапы. Обычно это предоплата 50% перед началом работы над дизайном и оставшиеся 50% после утверждения макетов — перед вёрсткой или сдачей готового проекта.</p></div>
+                    </div>
+                    <div class="faq__item" data-reveal>
+                        <button class="faq__q">Сколько времени занимает разработка? <span class="faq__icon"></span></button>
+                        <div class="faq__a"><p>Всё зависит от сложности задачи. Лендинг в среднем занимает от 7 до 14 дней. Многостраничный корпоративный сайт — от 3 до 5 недель с учётом всех согласований.</p></div>
+                    </div>
+                    <div class="faq__item" data-reveal>
+                        <button class="faq__q">Смогу ли я сам редактировать сайт? <span class="faq__icon"></span></button>
+                        <div class="faq__a"><p>Да. Если сайт собирается на Tilda, я записываю подробную видеоинструкцию о том, как менять тексты, картинки и добавлять новые блоки самостоятельно, без знания кода.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== КОНТАКТЫ ========== -->
+        <section class="contact" id="contact">
+            <div class="hero__bg">
+                <span class="hero__blob hero__blob--1"></span>
+                <span class="hero__blob hero__blob--2"></span>
+            </div>
+            <div class="container contact__inner">
+                <span class="label label--light" data-reveal>(Контакты)</span>
+                <h2 class="contact__title" data-haze>Готовы обсудить проект?</h2>
+                <a href="mailto:faev98@gmail.com" class="contact__mail" data-reveal>faev98@gmail.com</a>
+                <div class="contact__actions" data-reveal>
+                    <button class="btn btn--light" data-open-form>Оставить заявку <i class="arrow">↗</i></button>
+                    <a href="https://t.me/iwebdsgn" target="_blank" rel="noopener" class="btn btn--outline">Telegram</a>
+                    <a href="https://wa.me/998507590368" target="_blank" rel="noopener" class="btn btn--outline">WhatsApp</a>
+                    <a href="https://www.instagram.com/dsgn.faev/" target="_blank" rel="noopener" class="btn btn--outline">Instagram</a>
+                </div>
+            </div>
+
+            <footer class="footer container">
+                <div class="footer__big">Faev Design<sup>®</sup></div>
+                <div class="footer__bottom">
+                    <span>© 2026 Иван Фаев</span>
+                    <span>Дизайн и код — с любовью к деталям</span>
+                </div>
+            </footer>
+        </section>
+    </main>
+
+    <!-- Курсор «Смотреть» при наведении на кейс -->
+    <div class="cursor-tag" id="cursorTag">Смотреть ↗</div>
+
+    <!-- ========== ОКНО ЗАЯВКИ ========== -->
+    <div class="modal" id="modal" aria-hidden="true">
+        <div class="modal__box">
+            <button class="modal__close" data-close-form aria-label="Закрыть">×</button>
+
+            <div id="formView">
+                <h2 class="modal__title">Обсудить проект</h2>
+                <p class="muted">Ответьте на пару вопросов, чтобы я мог сориентировать вас по срокам и стоимости.</p>
+                <form class="form" id="leadForm">
+                    <input type="text" name="name" placeholder="Ваше имя" required>
+                    <input type="text" name="contact" placeholder="Telegram / WhatsApp" required>
+                    <textarea name="task" rows="3" placeholder="Кратко о задаче: какой сайт нужен?" required></textarea>
+                    <button type="submit" class="btn btn--dark" id="submitBtn">Отправить заявку</button>
+                </form>
+            </div>
+
+            <div id="successView" class="modal__success" hidden>
+                <h2 class="modal__title">Заявка отправлена!</h2>
+                <p class="muted">Спасибо! Я скоро с вами свяжусь.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
