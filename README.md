@@ -17,7 +17,12 @@ img/cases/        — скриншоты кейсов (.webp)
 ## Как открыть
 
 Откройте `index.html` в браузере — сервер и сборка не нужны.
-Для GitHub Pages: Settings → Pages → Deploy from branch → `main` / root.
+
+## Публикация
+
+Сайт опубликован через GitHub Pages на домене **faevdsgn.space** (файл `CNAME` в корне).
+DNS у регистратора: A-записи `@` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`,
+`185.199.111.153` и CNAME-запись `www` → `depresar.github.io`.
 
 ## Секции
 
