@@ -17,23 +17,36 @@
 
     <!-- ========== ШАПКА ========== -->
     <header class="header" id="header">
-        <a href="mailto:faev98@gmail.com" class="header__mail">faev98@gmail.com</a>
+        <div class="header__bar" id="navPill">
+            <div class="header__row">
+                <div class="header__left">
+                    <button class="header__burger burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+                        <span></span><span></span><span></span>
+                    </button>
+                    <nav class="header__links">
+                        <a href="#works">Кейсы<sup>12</sup></a>
+                        <a href="#about">Обо мне</a>
+                        <a href="#services">Стоимость</a>
+                        <a href="#faq">Вопросы</a>
+                    </nav>
+                </div>
 
-        <div class="nav-pill" id="navPill">
-            <div class="nav-pill__bar">
-                <a href="#top" class="nav-pill__logo">Faev Design<sup>®</sup></a>
-                <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
-                    <span></span><span></span><span></span>
-                </button>
+                <a href="#top" class="header__logo">Faev Design<sup>®</sup></a>
+
+                <div class="header__actions">
+                    <a href="https://t.me/iwebdsgn" target="_blank" rel="noopener" class="btn-head btn-head--ghost">Telegram <i class="dot"></i></a>
+                    <button class="btn-head btn-head--light" data-open-form>Обсудить проект <i class="dot"></i></button>
+                </div>
             </div>
-            <div class="nav-pill__menu">
-                <nav class="nav-pill__inner">
-                    <a href="#about" class="nav-pill__link"><span>01</span>Обо мне</a>
-                    <a href="#works" class="nav-pill__link"><span>02</span>Работы</a>
-                    <a href="#services" class="nav-pill__link"><span>03</span>Услуги</a>
-                    <a href="#faq" class="nav-pill__link"><span>04</span>Вопросы</a>
-                    <a href="#contact" class="nav-pill__link"><span>05</span>Контакты</a>
-                    <div class="nav-pill__socials">
+
+            <div class="header__menu">
+                <nav class="header__inner">
+                    <a href="#about" class="menu-link"><span>01</span>Обо мне</a>
+                    <a href="#works" class="menu-link"><span>02</span>Работы</a>
+                    <a href="#services" class="menu-link"><span>03</span>Услуги</a>
+                    <a href="#faq" class="menu-link"><span>04</span>Вопросы</a>
+                    <a href="#contact" class="menu-link"><span>05</span>Контакты</a>
+                    <div class="menu-socials">
                         <a href="https://t.me/iwebdsgn" target="_blank" rel="noopener">Telegram</a>
                         <a href="https://wa.me/998507590368" target="_blank" rel="noopener">WhatsApp</a>
                         <a href="https://www.instagram.com/dsgn.faev/" target="_blank" rel="noopener">Instagram</a>
@@ -41,56 +54,52 @@
                 </nav>
             </div>
         </div>
-
-        <button class="btn btn--outline header__cta" data-open-form>
-            Обсудить проект <i class="arrow">↗</i>
-        </button>
     </header>
 
     <main>
         <!-- ========== ГЛАВНЫЙ ЭКРАН ========== -->
         <section class="hero" id="top">
-            <div class="hero__bg">
-                <span class="hero__blob hero__blob--1"></span>
-                <span class="hero__blob hero__blob--2"></span>
-                <span class="hero__blob hero__blob--3"></span>
-            </div>
+            <div class="hero__card">
+                <div class="hero__bgword" data-speed="0.25" aria-hidden="true">faevdesign</div>
+                <div class="hero__glow"></div>
 
-            <!-- Фото по центру -->
-            <div class="hero__person" id="heroPerson">
-                <img src="img/ivan-hero.webp" alt="Иван Фаев" fetchpriority="high">
-            </div>
+                <h1 class="hero__title">
+                    <span class="mask"><span>Сайты, которые</span></span>
+                    <span class="mask hero__accent"><span>работают и впечатляют</span></span>
+                </h1>
 
-            <!-- Вращающийся бейдж -->
-            <div class="hero__badge" id="heroBadge" aria-hidden="true">
-                <svg class="badge__text" viewBox="0 0 200 200">
-                    <defs>
-                        <path id="circlePath" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/>
-                    </defs>
-                    <text><textPath href="#circlePath">веб-дизайн • tilda zero block • figma • frontend • </textPath></text>
-                </svg>
-                <svg class="badge__dash" viewBox="0 0 200 200">
-                    <circle cx="100" cy="100" r="54"/>
-                </svg>
-                <svg class="badge__mark" viewBox="0 0 64 64">
-                    <path d="M22 8h40l-5 12H34l-3 8h20l-5 12H26l-7 18H2z"/>
-                </svg>
-            </div>
+                <div class="hero__person" data-speed="0.12">
+                    <img src="img/ivan-hero.webp" alt="Иван Фаев" fetchpriority="high">
+                </div>
 
-            <h1 class="hero__title" aria-label="Faev Design">
-                <span class="hero__word hero__word--left"><span class="mask"><span>Faev<sup>®</sup></span></span></span>
-                <span class="hero__word hero__word--right"><span class="mask"><span>Design</span></span></span>
-            </h1>
+                <!-- Вращающийся бейдж -->
+                <div class="hero__badge" id="heroBadge" aria-hidden="true">
+                    <svg class="badge__text" viewBox="0 0 200 200">
+                        <defs>
+                            <path id="circlePath" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/>
+                        </defs>
+                        <text><textPath href="#circlePath">веб-дизайн • tilda zero block • figma • frontend • </textPath></text>
+                    </svg>
+                    <svg class="badge__dash" viewBox="0 0 200 200">
+                        <circle cx="100" cy="100" r="54"/>
+                    </svg>
+                    <svg class="badge__mark" viewBox="0 0 64 64">
+                        <path d="M22 8h40l-5 12H34l-3 8h20l-5 12H26l-7 18H2z"/>
+                    </svg>
+                </div>
 
-            <div class="hero__bottom">
-                <p class="hero__lead">
-                    <span class="mask"><span>Веб-дизайн, сайты на Tilda</span></span>
-                    <span class="mask"><span>Zero Block и frontend-</span></span>
-                    <span class="mask"><span>разработка</span></span>
-                </p>
-                <div class="hero__aside">
-                    <div class="status"><i class="status__dot"></i>Открыт для проектов на 2026 год</div>
-                    <p>Создаю сайты, которые работают и впечатляют: продуманные интерфейсы, качественный код и плавная анимация.</p>
+                <div class="hero__bottom">
+                    <span class="hero__line"></span>
+                    <div class="hero__info">
+                        <span class="hero__label">Автор</span>
+                        <strong>Иван Фаев</strong>
+                        <span>Веб-дизайн, Tilda и frontend</span>
+                    </div>
+                    <div class="hero__info hero__info--right">
+                        <span class="hero__label">Принцип</span>
+                        <strong>Сначала смысл, потом форма</strong>
+                        <span>Открыт для проектов на 2026 год</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -155,49 +164,49 @@
                     </article>
 
                     <article class="case case--sm" data-reveal>
-                        <div class="case__media"><img src="img/cases/avenue.webp" alt="AVENUE BAND — кавер-группа" loading="lazy"></div>
+                        <div class="case__media"><img src="img/cases/rakovar.webp" alt="Rakovar64 — магазин морепродуктов" loading="lazy"></div>
                         <div class="case__info">
-                            <span><i class="case__num">02</i>AVENUE BAND <em>(кавер-группа)</em></span>
-                            <span>Год <em>(2025)</em></span>
+                            <span><i class="case__num">02</i>Rakovar64 <em>(магазин морепродуктов)</em></span>
+                            <span>Год <em>(2024)</em></span>
                         </div>
                     </article>
                     <article class="case case--lg" data-reveal>
-                        <div class="case__media"><img src="img/cases/shapes.webp" alt="Shapes by Gaia — бренд авторской керамики" loading="lazy"></div>
+                        <div class="case__media"><img src="img/cases/vdoh.webp" alt="ВДох — керамика ручной работы" loading="lazy"></div>
                         <div class="case__info">
-                            <span><i class="case__num">03</i>Shapes by Gaia <em>(бренд авторской керамики)</em></span>
-                            <span>Год <em>(2024)</em></span>
+                            <span><i class="case__num">03</i>ВДох <em>(керамика ручной работы)</em></span>
+                            <span>Год <em>(2026)</em></span>
                         </div>
                     </article>
 
                     <article class="case case--xs" data-reveal>
-                        <div class="case__media"><img src="img/cases/grankina.webp" alt="Юлия Гранкина — художник, интерьерные картины" loading="lazy"></div>
+                        <div class="case__media"><img src="img/cases/mugs.webp" alt="Mugs & Kisses — фарфоровая посуда" loading="lazy"></div>
                         <div class="case__info">
-                            <span><i class="case__num">04</i>Юлия Гранкина <em>(художник, интерьерные картины)</em></span>
+                            <span><i class="case__num">04</i>Mugs &amp; Kisses <em>(фарфоровая посуда)</em></span>
                             <span>Год <em>(2026)</em></span>
                         </div>
                     </article>
                     <p class="works__note muted" data-reveal>Каждый проект начинается с идеи. Дальше я ищу правильную форму — через смысл, визуальный язык, структуру и детали.</p>
                     <article class="case case--xs case--offset" data-reveal>
-                        <div class="case__media"><img src="img/cases/lions.webp" alt="Юр. группа «ЛЬВЫ» — юридическое агентство" loading="lazy"></div>
+                        <div class="case__media"><img src="img/cases/kravchenko.webp" alt="Анастасия Кравченко — психолог" loading="lazy"></div>
                         <div class="case__info">
-                            <span><i class="case__num">05</i>Юр. группа «ЛЬВЫ» <em>(юридическое агентство)</em></span>
-                            <span>Год <em>(2024)</em></span>
+                            <span><i class="case__num">05</i>Анастасия Кравченко <em>(психолог)</em></span>
+                            <span>Год <em>(2025)</em></span>
                         </div>
                     </article>
 
                     <article class="case case--full" data-reveal>
-                        <div class="case__media" style="--tint: #d9e2ea"><img src="img/cases/vdoh.webp" alt="ВДох — керамика ручной работы" loading="lazy"></div>
+                        <div class="case__media" style="--tint: #e9e6e1"><img src="img/cases/shapes.webp" alt="Shapes by Gaia — бренд авторской керамики" loading="lazy"></div>
                         <div class="case__info">
-                            <span><i class="case__num">06</i>ВДох <em>(керамика ручной работы)</em></span>
-                            <span>Год <em>(2026)</em></span>
+                            <span><i class="case__num">06</i>Shapes by Gaia <em>(бренд авторской керамики)</em></span>
+                            <span>Год <em>(2024)</em></span>
                         </div>
                     </article>
 
                     <article class="case case--lg" data-reveal>
-                        <div class="case__media"><img src="img/cases/rakovar.webp" alt="Rakovar64 — магазин морепродуктов" loading="lazy"></div>
+                        <div class="case__media"><img src="img/cases/avenue.webp" alt="AVENUE BAND — кавер-группа" loading="lazy"></div>
                         <div class="case__info">
-                            <span><i class="case__num">07</i>Rakovar64 <em>(магазин морепродуктов)</em></span>
-                            <span>Год <em>(2024)</em></span>
+                            <span><i class="case__num">07</i>AVENUE BAND <em>(кавер-группа)</em></span>
+                            <span>Год <em>(2025)</em></span>
                         </div>
                     </article>
                     <article class="case case--sm case--offset" data-reveal>
@@ -209,10 +218,10 @@
                     </article>
 
                     <article class="case case--sm" data-reveal>
-                        <div class="case__media"><img src="img/cases/kravchenko.webp" alt="Анастасия Кравченко — психолог" loading="lazy"></div>
+                        <div class="case__media"><img src="img/cases/lions.webp" alt="Юр. группа «ЛЬВЫ» — юридическое агентство" loading="lazy"></div>
                         <div class="case__info">
-                            <span><i class="case__num">09</i>Анастасия Кравченко <em>(психолог)</em></span>
-                            <span>Год <em>(2025)</em></span>
+                            <span><i class="case__num">09</i>Юр. группа «ЛЬВЫ» <em>(юридическое агентство)</em></span>
+                            <span>Год <em>(2024)</em></span>
                         </div>
                     </article>
                     <article class="case case--lg" data-reveal>
@@ -231,9 +240,9 @@
                         </div>
                     </article>
                     <article class="case case--sm case--offset" data-reveal>
-                        <div class="case__media"><img src="img/cases/mugs.webp" alt="Mugs & Kisses — фарфоровая посуда" loading="lazy"></div>
+                        <div class="case__media"><img src="img/cases/grankina.webp" alt="Юлия Гранкина — художник, интерьерные картины" loading="lazy"></div>
                         <div class="case__info">
-                            <span><i class="case__num">12</i>Mugs &amp; Kisses <em>(фарфоровая посуда)</em></span>
+                            <span><i class="case__num">12</i>Юлия Гранкина <em>(художник, интерьерные картины)</em></span>
                             <span>Год <em>(2026)</em></span>
                         </div>
                     </article>
@@ -246,7 +255,7 @@
             <div class="marquee__row" data-marquee="1">
                 <span>Веб-дизайн</span><i>✦</i><span>Tilda Zero Block</span><i>✦</i><span>Figma</span><i>✦</i><span>Frontend</span><i>✦</i><span>Анимации</span><i>✦</i>
             </div>
-            <div class="marquee__row marquee__row--outline" data-marquee="-1">
+            <div class="marquee__row" data-marquee="-1">
                 <span>UI / UX</span><i>✦</i><span>Лендинги</span><i>✦</i><span>Корпоративные сайты</span><i>✦</i><span>Интернет-магазины</span><i>✦</i>
             </div>
         </section>
@@ -342,9 +351,9 @@
 
         <!-- ========== КОНТАКТЫ ========== -->
         <section class="contact" id="contact">
-            <div class="hero__bg">
-                <span class="hero__blob hero__blob--1"></span>
-                <span class="hero__blob hero__blob--2"></span>
+            <div class="sunset">
+                <span class="sunset__blob sunset__blob--1"></span>
+                <span class="sunset__blob sunset__blob--2"></span>
             </div>
             <div class="container contact__inner">
                 <span class="label label--light" data-reveal>(Контакты)</span>
