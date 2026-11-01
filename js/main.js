@@ -26,10 +26,58 @@ if (lenis) {
     });
 }
 
-// ---------- Появление главного экрана после загрузки шрифтов ----------
-(document.fonts ? document.fonts.ready : Promise.resolve()).then(() => {
-    requestAnimationFrame(() => document.body.classList.add('is-loaded'));
-});
+// ---------- Прелоадер и появление главного экрана ----------
+// Счётчик идёт 0→100% примерно за секунду, но не закончится, пока не загрузятся шрифты
+// и главное фото (максимум 2 с). Показывается один раз за визит — дальше сайт открывается сразу.
+const fontsReady = document.fonts ? document.fonts.ready : Promise.resolve();
+const heroImg = document.querySelector('.hero__person img');
+const heroImgReady = heroImg && heroImg.decode ? heroImg.decode().catch(() => {}) : Promise.resolve();
+const revealHero = () => requestAnimationFrame(() => document.body.classList.add('is-loaded'));
+
+(function runPreloader() {
+    const preloader = document.getElementById('preloader');
+    let seen = false;
+    try { seen = sessionStorage.getItem('faev-preloaded') === '1'; } catch (e) { /* хранилище недоступно */ }
+
+    if (!preloader || reduceMotion || seen) {
+        if (preloader) preloader.remove();
+        fontsReady.then(revealHero);
+        return;
+    }
+
+    try { sessionStorage.setItem('faev-preloaded', '1'); } catch (e) { /* хранилище недоступно */ }
+    document.documentElement.classList.add('is-preloading');
+    if (lenis) lenis.stop();
+
+    const count = document.getElementById('preCount');
+    const bar = document.getElementById('preBar');
+    const minTime = 1000;
+    const start = performance.now();
+    let ready = false;
+    Promise.all([fontsReady, heroImgReady]).then(() => { ready = true; });
+    setTimeout(() => { ready = true; }, 2000);
+
+    const tick = (now) => {
+        const t = clamp((now - start) / minTime, 0, 1);
+        let progress = 1 - Math.pow(1 - t, 3);
+        if (!ready) progress = Math.min(progress, 0.9);
+        count.textContent = Math.round(progress * 100);
+        bar.style.transform = `scaleX(${progress})`;
+
+        if (progress < 1) {
+            requestAnimationFrame(tick);
+            return;
+        }
+        setTimeout(() => {
+            preloader.classList.add('is-done');
+            document.documentElement.classList.remove('is-preloading');
+            if (lenis) lenis.start();
+            setTimeout(revealHero, 250);
+            setTimeout(() => preloader.remove(), 1400);
+        }, 150);
+    };
+    requestAnimationFrame(tick);
+})();
 
 // ---------- Появление элементов при скролле ----------
 const revealObserver = new IntersectionObserver((entries) => {

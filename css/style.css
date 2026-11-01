@@ -190,6 +190,128 @@ img {
 }
 
 /* =========================================================
+   Прелоадер: чёрный экран со знаком и счётчиком,
+   в конце сжимается в скруглённую рамку главного экрана
+   ========================================================= */
+
+.preloader {
+    --frame: 18px;
+    --frame-radius: 28px;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: grid;
+    place-items: center;
+    background: #000;
+    color: var(--white);
+    clip-path: inset(0 round 0);
+    transition: clip-path 0.8s var(--ease), opacity 0.45s 0.35s;
+}
+
+/* Пока идёт прелоадер, страница не прокручивается */
+html.is-preloading {
+    overflow: hidden;
+}
+
+.preloader.is-done {
+    clip-path: inset(var(--frame) round var(--frame-radius));
+    opacity: 0;
+    pointer-events: none;
+}
+
+.preloader__center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    transition: opacity 0.4s, transform 0.6s var(--ease);
+}
+
+.preloader.is-done .preloader__center {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.96);
+}
+
+.preloader__mark {
+    width: 64px;
+    fill: var(--accent);
+    animation: preMark 0.9s var(--ease) both;
+}
+
+@keyframes preMark {
+    from { opacity: 0; transform: translateY(18px) rotate(-12deg) scale(0.7); }
+    to   { opacity: 1; transform: none; }
+}
+
+.preloader__word {
+    display: block;
+    overflow: hidden;
+    padding-bottom: 0.08em;
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    letter-spacing: -0.05em;
+    line-height: 1;
+}
+
+.preloader__word > span {
+    display: block;
+    animation: preWord 0.9s 0.12s var(--ease) both;
+}
+
+.preloader__word sup {
+    font-size: 0.4em;
+    color: var(--accent);
+}
+
+@keyframes preWord {
+    from { transform: translateY(110%); }
+    to   { transform: none; }
+}
+
+.preloader__bottom {
+    position: absolute;
+    left: 40px;
+    right: 40px;
+    bottom: 34px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    transition: opacity 0.4s;
+}
+
+.preloader.is-done .preloader__bottom {
+    opacity: 0;
+}
+
+.preloader__caption {
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.preloader__count {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: clamp(3rem, 7vw, 6.5rem);
+    line-height: 0.8;
+    letter-spacing: -0.06em;
+    font-variant-numeric: tabular-nums;
+}
+
+.preloader__bar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+/* =========================================================
    Шапка
    ========================================================= */
 
@@ -1729,6 +1851,22 @@ img {
     .contact {
         margin: 10px;
         border-radius: 22px;
+    }
+
+    .preloader {
+        --frame: 10px;
+        --frame-radius: 22px;
+    }
+
+    .preloader__bottom {
+        left: 20px;
+        right: 20px;
+        bottom: 24px;
+    }
+
+    .preloader__caption {
+        max-width: 50%;
+        font-size: 0.7rem;
     }
 
     .contact__inner {
