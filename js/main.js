@@ -5,6 +5,27 @@
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const clamp = (v, min, max) => Math.min(max, Math.max(min, v));
 
+// ---------- Плавный скролл колёсиком мыши (библиотека Lenis) ----------
+// На телефонах остаётся родной скролл — он и так плавный.
+const lenis = (!reduceMotion && window.Lenis) ? new Lenis({ lerp: 0.09, wheelMultiplier: 1 }) : null;
+
+if (lenis) {
+    (function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    })(performance.now());
+
+    // Ссылки меню (#about, #works…) тоже прокручиваем плавно, с отступом под шапку
+    document.querySelectorAll('a[href^="#"]').forEach((link) => {
+        link.addEventListener('click', (e) => {
+            const target = document.querySelector(link.getAttribute('href'));
+            if (!target) return;
+            e.preventDefault();
+            lenis.scrollTo(target, { offset: link.getAttribute('href') === '#top' ? 0 : -110, duration: 1.4 });
+        });
+    });
+}
+
 // ---------- Появление главного экрана после загрузки шрифтов ----------
 (document.fonts ? document.fonts.ready : Promise.resolve()).then(() => {
     requestAnimationFrame(() => document.body.classList.add('is-loaded'));
@@ -204,12 +225,14 @@ function openForm() {
     modal.classList.add('is-open');
     modal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('is-locked');
+    if (lenis) lenis.stop();
 }
 
 function closeForm() {
     modal.classList.remove('is-open');
     modal.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('is-locked');
+    if (lenis) lenis.start();
 }
 
 document.querySelectorAll('[data-open-form]').forEach((btn) => btn.addEventListener('click', openForm));

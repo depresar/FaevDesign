@@ -44,6 +44,20 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+/* Плавный скролл (Lenis): пока он работает, встроенная плавность браузера отключается */
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+
+html.lenis {
+    scroll-behavior: auto;
+}
+
+.lenis.lenis-stopped {
+    overflow: clip;
+}
+
 body.is-locked {
     overflow: hidden;
 }
