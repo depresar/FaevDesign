@@ -1262,9 +1262,13 @@ img {
     100% { transform: translate(-6vw, 6vh) scale(0.9); }
 }
 
+/* Подвал — скруглённая карточка с теми же отступами, что у главного экрана */
 .contact {
     position: relative;
+    margin: 18px;
+    border-radius: 28px;
     overflow: hidden;
+    isolation: isolate;
     color: var(--white);
     padding-top: clamp(60px, 6vw, 100px);
 }
@@ -1720,6 +1724,11 @@ img {
     .footer__bottom {
         flex-direction: column;
         gap: 6px;
+    }
+
+    .contact {
+        margin: 10px;
+        border-radius: 22px;
     }
 
     .contact__inner {
