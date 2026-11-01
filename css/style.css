@@ -1496,6 +1496,7 @@ img {
 
     .header__logo {
         font-size: 1.25rem;
+        white-space: nowrap;
     }
 
     .header__row {
@@ -1527,11 +1528,15 @@ img {
         bottom: 18%;
     }
 
+    /* На телефоне бейдж стоит в потоке сразу под заголовком — не наезжает на текст при любой высоте экрана */
     .hero__badge {
-        left: auto;
-        right: 5%;
-        top: 34%;
-        width: 88px;
+        position: relative;
+        top: auto;
+        right: auto;
+        translate: none;
+        display: block;
+        width: clamp(72px, 22vw, 96px);
+        margin: 10px 7% 0 auto;
     }
 
     .hero__info--right {
@@ -1706,6 +1711,18 @@ img {
 
     .modal__box {
         padding: 40px 22px 24px;
+    }
+}
+
+/* Совсем узкие телефоны (iPhone SE и т.п.) */
+@media (max-width: 380px) {
+    .header__logo {
+        font-size: 1.05rem;
+    }
+
+    .btn-head {
+        padding: 0 12px;
+        font-size: 0.85rem;
     }
 }
 
