@@ -220,7 +220,7 @@ document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeForm(
 // Отправка заявки: форма шлёт данные в Cloudflare Worker (код — worker/telegram-lead.js),
 // а он пересылает их в Telegram. Токен бота хранится только в настройках воркера.
 // Сюда вписывается адрес воркера вида https://faev-leads.ИМЯ.workers.dev
-const LEAD_ENDPOINT = '';
+const LEAD_ENDPOINT = 'https://faev-leads.faev98.workers.dev';
 
 async function sendLead(data) {
     if (!LEAD_ENDPOINT) throw new Error('Адрес приёма заявок не указан');
