@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=20261101">
+    <link rel="stylesheet" href="css/style.css?v=20261101-2">
 </head>
 <body>
 
@@ -387,6 +387,10 @@
                 <div class="footer__big">Faev Design<sup>®</sup></div>
                 <div class="footer__bottom">
                     <span>© 2026 Иван Фаев</span>
+                    <nav class="footer__legal">
+                        <a href="privacy.html" target="_blank" rel="noopener">Политика конфиденциальности</a>
+                        <a href="consent.html" target="_blank" rel="noopener">Согласие на обработку персональных данных</a>
+                    </nav>
                     <span>Дизайн и код — с любовью к деталям</span>
                 </div>
             </footer>
@@ -410,6 +414,12 @@
                     <textarea name="task" rows="3" placeholder="Кратко о задаче: какой сайт нужен?" required></textarea>
                     <!-- Ловушка для спам-ботов: поле скрыто от людей -->
                     <input type="text" name="website" class="form__trap" tabindex="-1" autocomplete="off" aria-hidden="true">
+                    <!-- Согласие на обработку персональных данных: по 152-ФЗ галочку ставит сам человек -->
+                    <label class="consent">
+                        <input type="checkbox" name="consent" required>
+                        <span class="consent__box"></span>
+                        <span class="consent__text">Я даю <a href="consent.html" target="_blank" rel="noopener">согласие на обработку персональных данных</a> и принимаю <a href="privacy.html" target="_blank" rel="noopener">политику конфиденциальности</a></span>
+                    </label>
                     <button type="submit" class="btn btn--dark" id="submitBtn">Отправить заявку</button>
                 </form>
             </div>
@@ -421,7 +431,7 @@
         </div>
     </div>
 
-    <script src="js/vendor/lenis.min.js?v=20261101"></script>
-    <script src="js/main.js?v=20261101"></script>
+    <script src="js/vendor/lenis.min.js?v=20261101-2"></script>
+    <script src="js/main.js?v=20261101-2"></script>
 </body>
 </html>
