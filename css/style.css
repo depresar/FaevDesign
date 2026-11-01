@@ -626,8 +626,7 @@ img {
 .badge__text {
     fill: currentColor;
     font-family: var(--font-body);
-    font-size: 11px;
-    letter-spacing: 2.2px;
+    font-size: 10px;
     text-transform: uppercase;
     animation: spin 22s linear infinite;
 }
