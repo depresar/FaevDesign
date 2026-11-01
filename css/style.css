@@ -1415,6 +1415,14 @@ img {
     transition: border-color 0.3s;
 }
 
+.form .form__trap {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
 .form input:focus,
 .form textarea:focus {
     outline: none;

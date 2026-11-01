@@ -217,10 +217,19 @@ document.querySelectorAll('[data-close-form]').forEach((btn) => btn.addEventList
 modal.addEventListener('click', (e) => { if (e.target === modal) closeForm(); });
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeForm(); });
 
-// Отправка заявки. Сервис приёма заявок пока не подключён —
-// когда выберем новый, нужно будет реализовать только эту функцию.
+// Отправка заявки: форма шлёт данные в Cloudflare Worker (код — worker/telegram-lead.js),
+// а он пересылает их в Telegram. Токен бота хранится только в настройках воркера.
+// Сюда вписывается адрес воркера вида https://faev-leads.ИМЯ.workers.dev
+const LEAD_ENDPOINT = '';
+
 async function sendLead(data) {
-    throw new Error('Сервис приёма заявок не подключён');
+    if (!LEAD_ENDPOINT) throw new Error('Адрес приёма заявок не указан');
+    const response = await fetch(LEAD_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+    });
+    if (!response.ok) throw new Error(`Заявка не отправлена: ${response.status}`);
 }
 
 leadForm.addEventListener('submit', async (e) => {
