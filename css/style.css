@@ -4,16 +4,23 @@
    ========================================================= */
 
 :root {
-    --accent: #ff5a00;
+    /* Акцентный цвет сайта. Оранжевый вариант: --accent #ff5a00, --accent-rgb 255, 90, 0,
+       градиент подвала #d9b2a3 / #f59a2c / #e8611a, пятна #ffb13b / #f1a28a / #ff4d00 */
+    --accent: #2952ff;
+    --accent-rgb: 41, 82, 255;
     --ink: #0d0d0d;
     --white: #ffffff;
     --bg: #ffffff;
     --muted: #8a8a8a;
     --line: #e4e4e4;
 
-    --hero-top: #d9b2a3;
-    --hero-mid: #f59a2c;
-    --hero-bottom: #e8611a;
+    /* Градиент подвала и плавающие пятна в нём */
+    --sunset-top: #7b90ff;
+    --sunset-mid: #3358ff;
+    --sunset-bottom: #1023d9;
+    --blob-1: #4f6fff;
+    --blob-2: #93a8ff;
+    --blob-3: #0b1fe8;
 
     --font-display: 'Inter Tight', 'Inter', sans-serif;
     --font-body: 'Inter', sans-serif;
@@ -467,7 +474,7 @@ img {
     translate: -50% 0;
     z-index: -1;
     border-radius: 50%;
-    background: radial-gradient(closest-side, rgba(255, 90, 0, 0.28), rgba(255, 90, 0, 0.08) 55%, rgba(255, 90, 0, 0));
+    background: radial-gradient(closest-side, rgba(var(--accent-rgb), 0.3), rgba(var(--accent-rgb), 0.09) 55%, rgba(var(--accent-rgb), 0));
     animation: glow 6s ease-in-out infinite alternate;
 }
 
@@ -1196,11 +1203,11 @@ img {
    Контакты и подвал
    ========================================================= */
 
-/* Фон блока контактов: градиент «закат» + плавающие пятна + зерно */
+/* Фон блока контактов: цветной градиент + плавающие пятна + зерно */
 .sunset {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, var(--hero-top) 0%, var(--hero-mid) 45%, var(--hero-bottom) 100%);
+    background: linear-gradient(180deg, var(--sunset-top) 0%, var(--sunset-mid) 45%, var(--sunset-bottom) 100%);
     overflow: hidden;
 }
 
@@ -1226,7 +1233,7 @@ img {
     height: 55vw;
     left: -12vw;
     top: 30%;
-    background: #ffb13b;
+    background: var(--blob-1);
 }
 
 .sunset__blob--2 {
@@ -1234,7 +1241,7 @@ img {
     height: 45vw;
     right: -10vw;
     top: -10%;
-    background: #f1a28a;
+    background: var(--blob-2);
     animation-duration: 22s;
     animation-delay: -6s;
 }
@@ -1244,7 +1251,7 @@ img {
     height: 40vw;
     right: 10vw;
     bottom: -25%;
-    background: #ff4d00;
+    background: var(--blob-3);
     animation-duration: 26s;
     animation-delay: -12s;
 }
