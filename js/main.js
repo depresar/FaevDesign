@@ -27,8 +27,8 @@ if (lenis) {
 }
 
 // ---------- Прелоадер и появление главного экрана ----------
-// Счётчик идёт 0→100% примерно за секунду, но не закончится, пока не загрузятся шрифты
-// и главное фото (максимум 2 с). Показывается один раз за визит — дальше сайт открывается сразу.
+// Показывается при каждом заходе. Счётчик идёт 0→100% примерно за 2,2 с и не закончится,
+// пока не загрузятся шрифты и главное фото (на медленном интернете — максимум 4 с).
 const fontsReady = document.fonts ? document.fonts.ready : Promise.resolve();
 const heroImg = document.querySelector('.hero__person img');
 const heroImgReady = heroImg && heroImg.decode ? heroImg.decode().catch(() => {}) : Promise.resolve();
@@ -36,30 +36,28 @@ const revealHero = () => requestAnimationFrame(() => document.body.classList.add
 
 (function runPreloader() {
     const preloader = document.getElementById('preloader');
-    let seen = false;
-    try { seen = sessionStorage.getItem('faev-preloaded') === '1'; } catch (e) { /* хранилище недоступно */ }
 
-    if (!preloader || reduceMotion || seen) {
+    if (!preloader || reduceMotion) {
         if (preloader) preloader.remove();
         fontsReady.then(revealHero);
         return;
     }
 
-    try { sessionStorage.setItem('faev-preloaded', '1'); } catch (e) { /* хранилище недоступно */ }
     document.documentElement.classList.add('is-preloading');
     if (lenis) lenis.stop();
 
     const count = document.getElementById('preCount');
     const bar = document.getElementById('preBar');
-    const minTime = 1000;
+    const minTime = 2200;
     const start = performance.now();
     let ready = false;
     Promise.all([fontsReady, heroImgReady]).then(() => { ready = true; });
-    setTimeout(() => { ready = true; }, 2000);
+    setTimeout(() => { ready = true; }, 4000);
 
     const tick = (now) => {
         const t = clamp((now - start) / minTime, 0, 1);
-        let progress = 1 - Math.pow(1 - t, 3);
+        // Плавный разгон и торможение, чтобы счётчик не пролетал первые проценты
+        let progress = t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
         if (!ready) progress = Math.min(progress, 0.9);
         count.textContent = Math.round(progress * 100);
         bar.style.transform = `scaleX(${progress})`;
