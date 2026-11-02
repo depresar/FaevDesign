@@ -227,7 +227,11 @@ let cursorX = 0, cursorY = 0, tagX = 0, tagY = 0;
 
 if (window.matchMedia('(hover: hover)').matches) {
     document.querySelectorAll('.case').forEach((card) => {
-        card.addEventListener('mouseenter', () => cursorTag.classList.add('is-visible'));
+        card.addEventListener('mouseenter', () => {
+            // Кейс со ссылкой открывает сайт, без ссылки — просто листается
+            cursorTag.textContent = card.tagName === 'A' ? 'Открыть\nсайт ↗' : 'Листаем ↓';
+            cursorTag.classList.add('is-visible');
+        });
         card.addEventListener('mouseleave', () => cursorTag.classList.remove('is-visible'));
     });
 

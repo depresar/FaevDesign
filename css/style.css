@@ -1044,6 +1044,9 @@ html.is-preloading {
     color: var(--white);
     font-size: 0.95rem;
     font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+    white-space: pre-line;
     pointer-events: none;
     transform: scale(0);
     transition: transform 0.4s var(--ease);
