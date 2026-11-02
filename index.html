@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=20261102">
+    <link rel="stylesheet" href="css/style.css?v=20261102-2">
 </head>
 <body>
 
@@ -49,6 +49,10 @@
                 <a href="#top" class="header__logo">Faev Design<sup>®</sup></a>
 
                 <div class="header__actions">
+                    <div class="lang" role="group" aria-label="Language">
+                        <button type="button" data-lang="ru">RU</button>
+                        <button type="button" data-lang="en">EN</button>
+                    </div>
                     <a href="https://t.me/iwebdsgn" target="_blank" rel="noopener" class="btn-head btn-head--ghost">Telegram <i class="dot"></i></a>
                     <button class="btn-head btn-head--light" data-open-form>Обсудить проект <i class="dot"></i></button>
                 </div>
@@ -65,6 +69,10 @@
                         <a href="https://t.me/iwebdsgn" target="_blank" rel="noopener">Telegram</a>
                         <a href="https://wa.me/998507590368" target="_blank" rel="noopener">WhatsApp</a>
                         <a href="https://www.instagram.com/dsgn.faev/" target="_blank" rel="noopener">Instagram</a>
+                    </div>
+                    <div class="lang lang--menu" role="group" aria-label="Language">
+                        <button type="button" data-lang="ru">RU</button>
+                        <button type="button" data-lang="en">EN</button>
                     </div>
                 </nav>
             </div>
@@ -399,7 +407,7 @@
     </main>
 
     <!-- Курсор-подсказка при наведении на кейс -->
-    <div class="cursor-tag" id="cursorTag">Смотреть ↗</div>
+    <div class="cursor-tag" id="cursorTag">Открыть сайт ↗</div>
 
     <!-- ========== ОКНО ЗАЯВКИ ========== -->
     <div class="modal" id="modal" aria-hidden="true">
@@ -432,7 +440,8 @@
         </div>
     </div>
 
-    <script src="js/vendor/lenis.min.js?v=20261102"></script>
-    <script src="js/main.js?v=20261102"></script>
+    <script src="js/i18n.js?v=20261102-2"></script>
+    <script src="js/vendor/lenis.min.js?v=20261102-2"></script>
+    <script src="js/main.js?v=20261102-2"></script>
 </body>
 </html>

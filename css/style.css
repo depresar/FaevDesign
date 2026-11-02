@@ -421,6 +421,42 @@ html.is-preloading {
     gap: 12px;
 }
 
+/* Переключатель языка RU / EN */
+.lang {
+    display: inline-flex;
+    gap: 2px;
+    height: 52px;
+    padding: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+}
+
+.lang button {
+    min-width: 42px;
+    padding: 0 8px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.6);
+    transition: background 0.3s, color 0.3s;
+}
+
+.lang button:hover {
+    color: var(--white);
+}
+
+.lang button.is-active {
+    background: var(--white);
+    color: var(--ink);
+}
+
+/* В меню переключатель показываем только на телефоне */
+.lang--menu {
+    display: none;
+    align-self: flex-start;
+    height: 44px;
+    margin-top: 20px;
+}
+
 .btn-head {
     display: inline-flex;
     align-items: center;
@@ -1818,8 +1854,13 @@ html.is-preloading {
         padding: 10px;
     }
 
-    .header__actions .btn-head--ghost {
+    .header__actions .btn-head--ghost,
+    .header__actions .lang {
         display: none;
+    }
+
+    .lang--menu {
+        display: inline-flex;
     }
 
     .btn-head {

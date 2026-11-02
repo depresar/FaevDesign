@@ -37,7 +37,14 @@ const revealHero = () => requestAnimationFrame(() => document.body.classList.add
 (function runPreloader() {
     const preloader = document.getElementById('preloader');
 
-    if (!preloader || reduceMotion) {
+    // После переключения языка страница перезагружается — прелоадер второй раз не показываем
+    let skip = false;
+    try {
+        skip = sessionStorage.getItem('faev-skip-preloader') === '1';
+        sessionStorage.removeItem('faev-skip-preloader');
+    } catch (e) { /* хранилище недоступно */ }
+
+    if (!preloader || reduceMotion || skip) {
         if (preloader) preloader.remove();
         fontsReady.then(revealHero);
         return;
@@ -229,7 +236,7 @@ if (window.matchMedia('(hover: hover)').matches) {
     document.querySelectorAll('.case').forEach((card) => {
         card.addEventListener('mouseenter', () => {
             // Кейс со ссылкой открывает сайт, без ссылки — просто листается
-            cursorTag.textContent = card.tagName === 'A' ? 'Открыть\nсайт ↗' : 'Листаем ↓';
+            cursorTag.textContent = card.tagName === 'A' ? tr('Открыть\nсайт ↗') : tr('Листаем ↓');
             cursorTag.classList.add('is-visible');
         });
         card.addEventListener('mouseleave', () => cursorTag.classList.remove('is-visible'));
@@ -308,7 +315,7 @@ async function sendLead(data) {
 leadForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const originalText = submitBtn.textContent;
-    submitBtn.textContent = 'Отправка...';
+    submitBtn.textContent = tr('Отправка...');
     submitBtn.disabled = true;
 
     try {
@@ -318,7 +325,7 @@ leadForm.addEventListener('submit', async (e) => {
         leadForm.reset();
         setTimeout(closeForm, 4000);
     } catch (error) {
-        alert('Не удалось отправить заявку. Пожалуйста, напишите мне напрямую в Telegram: @iwebdsgn');
+        alert(tr('Не удалось отправить заявку. Пожалуйста, напишите мне напрямую в Telegram: @iwebdsgn'));
         console.error(error);
     } finally {
         submitBtn.textContent = originalText;
