@@ -11,7 +11,8 @@
 const EN = {
     // Заголовок вкладки и описание для поисковиков
     'Faev Design — веб-дизайн и разработка сайтов | Иван Фаев': 'Faev Design — web design & website development | Ivan Faev',
-    'Иван Фаев — веб-дизайнер. Дизайн сайтов в Figma, вёрстка на Tilda (Zero Block) и frontend-разработка.': 'Ivan Faev — web designer. Website design in Figma, Tilda (Zero Block) builds and frontend development.',
+    'Иван Фаев — веб-дизайнер. Дизайн в Figma, сайты на Tilda (Zero Block) и любых других платформах, разработка на коде с Claude Code.':
+        'Ivan Faev — web designer. Design in Figma, websites on Tilda (Zero Block) and any other platform, coded development with Claude Code.',
 
     // Прелоадер и шапка
     'Веб-дизайн и разработка сайтов': 'Web design & development',
