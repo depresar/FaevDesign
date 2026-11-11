@@ -2447,9 +2447,22 @@ html.is-preloading {
         grid-column: 1 / -1;
     }
 
+    /* Подвал на телефоне: всё по левому краю, ссылки в одну строку */
     .footer__bottom {
         flex-direction: column;
-        gap: 6px;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 20px 0 64px; /* снизу — место под кнопку «наверх» */
+    }
+
+    .footer__legal {
+        flex-direction: column;
+        gap: 8px;
+        font-size: 0.8rem;
+    }
+
+    .footer__legal a {
+        white-space: nowrap;
     }
 
     .contact {
