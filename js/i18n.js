@@ -50,6 +50,27 @@ const EN = {
         'From a landing page that needs to launch fast to a multi-page website where design becomes part of the business strategy.',
     'проектов запущено': 'projects launched',
 
+    // В работе
+    'В работе': 'In progress',
+    '(В работе)': '(In progress)',
+    'Что я делаю прямо\u00a0сейчас': 'What I’m working on\u00a0right now',
+    'Проекты, которые сейчас в разработке. Их уже можно открыть и посмотреть, на каком они этапе, — сайты обновляются по ходу работы.':
+        'Projects currently in development. You can already open them and see what stage they’re at — the sites update as the work goes on.',
+    'В разработке': 'In development',
+    'Этап:': 'Stage:',
+    'Дизайн': 'Design',
+    'Вёрстка': 'Build',
+    'Наполнение': 'Content',
+    'Запуск': 'Launch',
+    'Смотреть, что уже готово': 'See what’s ready',
+    'бренд фарфоровых украшений': 'porcelain jewellery brand',
+    'Арт текстиль Ирины Уткиной': 'Irina Utkina Art Textile',
+    'магазин шёлковых платков': 'silk scarves store',
+    'фарфоровая посуда с росписью': 'hand-painted porcelain tableware',
+    'mulifeyn — бренд фарфоровых украшений': 'mulifeyn — porcelain jewellery brand',
+    'Арт текстиль Ирины Уткиной — магазин шёлковых платков': 'Irina Utkina Art Textile — silk scarves store',
+    'Mugs & Kisses — фарфоровая посуда с росписью': 'Mugs & Kisses — hand-painted porcelain tableware',
+
     // Кейсы
     'Создаю сайты, которые выделяются и продают': 'I build websites that stand out and sell',
     'Подборка последних проектов: корпоративные сайты, лендинги и интернет-магазины. Наведите на проект, чтобы пролистать его первые экраны, и нажмите, чтобы открыть сайт. У каждого — своя идея, характер и визуальная система.':

@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=20261102-2">
+    <link rel="stylesheet" href="css/style.css?v=20261111">
 </head>
 <body>
 
@@ -61,10 +61,11 @@
             <div class="header__menu">
                 <nav class="header__inner">
                     <a href="#about" class="menu-link"><span>01</span>Обо мне</a>
-                    <a href="#works" class="menu-link"><span>02</span>Работы</a>
-                    <a href="#services" class="menu-link"><span>03</span>Услуги</a>
-                    <a href="#faq" class="menu-link"><span>04</span>Вопросы</a>
-                    <a href="#contact" class="menu-link"><span>05</span>Контакты</a>
+                    <a href="#wip" class="menu-link"><span>02</span>В работе</a>
+                    <a href="#works" class="menu-link"><span>03</span>Работы</a>
+                    <a href="#services" class="menu-link"><span>04</span>Услуги</a>
+                    <a href="#faq" class="menu-link"><span>05</span>Вопросы</a>
+                    <a href="#contact" class="menu-link"><span>06</span>Контакты</a>
                     <div class="menu-socials">
                         <a href="https://t.me/iwebdsgn" target="_blank" rel="noopener">Telegram</a>
                         <a href="https://wa.me/998507590368" target="_blank" rel="noopener">WhatsApp</a>
@@ -161,6 +162,87 @@
             </div>
         </section>
 
+        <!-- ========== В РАБОТЕ: проекты в разработке ========== -->
+        <!--
+            Как обновить этап: у пункта списка этапов поставьте class="is-done" (готово)
+            или class="is-current" (идёт сейчас), поменяйте «Этап:» и проценты (два места:
+            текст «65%» и style="--p: 65%"). Как добавить проект — скопируйте блок <a class="wip-card">.
+        -->
+        <section class="wip" id="wip">
+            <div class="container">
+                <div class="wip__head">
+                    <div>
+                        <span class="label label--light" data-reveal><i class="pulse"></i>(В работе)</span>
+                        <h2 class="h2" data-reveal>Что я делаю прямо&nbsp;сейчас</h2>
+                    </div>
+                    <p class="wip__desc" data-reveal data-delay="1">Проекты, которые сейчас в разработке. Их уже можно открыть и посмотреть, на каком они этапе, — сайты обновляются по ходу работы.</p>
+                </div>
+
+                <div class="wip__list" data-reveal>
+                    <a href="https://depresar.github.io/mulifeynn/" target="_blank" rel="noopener" class="wip-card">
+                        <div class="wip-card__browser">
+                            <div class="wip-card__bar"><i></i><i></i><i></i><span>depresar.github.io/mulifeynn</span></div>
+                            <div class="wip-card__media"><img src="img/wip/mulifeyn.webp" alt="mulifeyn — бренд фарфоровых украшений" loading="lazy"></div>
+                            <span class="wip-card__status"><i class="pulse"></i>В разработке</span>
+                        </div>
+                        <div class="wip-card__body">
+                            <h3 class="wip-card__name">mulifeyn</h3>
+                            <p class="wip-card__cat">бренд фарфоровых украшений</p>
+                            <div class="wip-card__progress">
+                                <span>Этап: <b>Вёрстка</b></span>
+                                <span>65%</span>
+                            </div>
+                            <span class="wip-card__track" style="--p: 65%"></span>
+                            <ol class="wip-card__steps">
+                                <li class="is-done">Дизайн</li><li class="is-current">Вёрстка</li><li>Наполнение</li><li>Запуск</li>
+                            </ol>
+                            <span class="wip-card__link">Смотреть, что уже готово <i class="arrow">↗</i></span>
+                        </div>
+                    </a>
+                    <a href="https://depresar.github.io/art-textile-irina-utkina/" target="_blank" rel="noopener" class="wip-card">
+                        <div class="wip-card__browser">
+                            <div class="wip-card__bar"><i></i><i></i><i></i><span>depresar.github.io/art-textile-irina-utkina</span></div>
+                            <div class="wip-card__media"><img src="img/wip/irina-utkina.webp" alt="Арт текстиль Ирины Уткиной — магазин шёлковых платков" loading="lazy"></div>
+                            <span class="wip-card__status"><i class="pulse"></i>В разработке</span>
+                        </div>
+                        <div class="wip-card__body">
+                            <h3 class="wip-card__name">Арт текстиль Ирины Уткиной</h3>
+                            <p class="wip-card__cat">магазин шёлковых платков</p>
+                            <div class="wip-card__progress">
+                                <span>Этап: <b>Наполнение</b></span>
+                                <span>80%</span>
+                            </div>
+                            <span class="wip-card__track" style="--p: 80%"></span>
+                            <ol class="wip-card__steps">
+                                <li class="is-done">Дизайн</li><li class="is-done">Вёрстка</li><li class="is-current">Наполнение</li><li>Запуск</li>
+                            </ol>
+                            <span class="wip-card__link">Смотреть, что уже готово <i class="arrow">↗</i></span>
+                        </div>
+                    </a>
+                    <a href="https://depresar.github.io/Mugs-Kisses/" target="_blank" rel="noopener" class="wip-card">
+                        <div class="wip-card__browser">
+                            <div class="wip-card__bar"><i></i><i></i><i></i><span>depresar.github.io/Mugs-Kisses</span></div>
+                            <div class="wip-card__media"><img src="img/wip/mugs-kisses.webp" alt="Mugs &amp; Kisses — фарфоровая посуда с росписью" loading="lazy"></div>
+                            <span class="wip-card__status"><i class="pulse"></i>В разработке</span>
+                        </div>
+                        <div class="wip-card__body">
+                            <h3 class="wip-card__name">Mugs &amp; Kisses</h3>
+                            <p class="wip-card__cat">фарфоровая посуда с росписью</p>
+                            <div class="wip-card__progress">
+                                <span>Этап: <b>Наполнение</b></span>
+                                <span>75%</span>
+                            </div>
+                            <span class="wip-card__track" style="--p: 75%"></span>
+                            <ol class="wip-card__steps">
+                                <li class="is-done">Дизайн</li><li class="is-done">Вёрстка</li><li class="is-current">Наполнение</li><li>Запуск</li>
+                            </ol>
+                            <span class="wip-card__link">Смотреть, что уже готово <i class="arrow">↗</i></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
         <!-- ========== КЕЙСЫ ========== -->
         <section class="works section" id="works">
             <div class="container">
@@ -202,13 +284,13 @@
                         </div>
                     </a>
 
-                    <article class="case case--xs" data-reveal>
+                    <a href="https://depresar.github.io/Mugs-Kisses/" target="_blank" rel="noopener" class="case case--xs" data-reveal>
                         <div class="case__media"><img src="img/cases/mugs.webp" alt="Mugs & Kisses — фарфоровая посуда" loading="lazy"></div>
                         <div class="case__info">
                             <span><i class="case__num">04</i>Mugs &amp; Kisses <em>(фарфоровая посуда)</em></span>
                             <span>Год <em>(2026)</em></span>
                         </div>
-                    </article>
+                    </a>
                     <p class="works__note muted" data-reveal>Каждый проект начинается с идеи. Дальше я ищу правильную форму — через смысл, визуальный язык, структуру и детали.</p>
                     <a href="http://kravchenkoa.ru" target="_blank" rel="noopener" class="case case--xs case--offset" data-reveal>
                         <div class="case__media"><img src="img/cases/kravchenko.webp" alt="Анастасия Кравченко — психолог" loading="lazy"></div>
@@ -440,8 +522,8 @@
         </div>
     </div>
 
-    <script src="js/i18n.js?v=20261102-2"></script>
-    <script src="js/vendor/lenis.min.js?v=20261102-2"></script>
-    <script src="js/main.js?v=20261102-2"></script>
+    <script src="js/i18n.js?v=20261111"></script>
+    <script src="js/vendor/lenis.min.js?v=20261111"></script>
+    <script src="js/main.js?v=20261111"></script>
 </body>
 </html>
