@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=20261111">
+    <link rel="stylesheet" href="css/style.css?v=20261111-2">
 </head>
 <body>
 
@@ -488,6 +488,17 @@
         </section>
     </main>
 
+    <!-- Кнопка «наверх»: появляется после первого экрана, кольцо показывает, сколько пролистано -->
+    <button class="to-top" id="toTop" aria-label="Наверх">
+        <svg class="to-top__ring" viewBox="0 0 60 60" width="60" height="60" aria-hidden="true">
+            <circle cx="30" cy="30" r="28"/>
+            <circle class="to-top__progress" cx="30" cy="30" r="28" pathLength="1"/>
+        </svg>
+        <svg class="to-top__arrow" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+            <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+    </button>
+
     <!-- Курсор-подсказка при наведении на кейс -->
     <div class="cursor-tag" id="cursorTag">Открыть сайт ↗</div>
 
@@ -522,8 +533,8 @@
         </div>
     </div>
 
-    <script src="js/i18n.js?v=20261111"></script>
-    <script src="js/vendor/lenis.min.js?v=20261111"></script>
-    <script src="js/main.js?v=20261111"></script>
+    <script src="js/i18n.js?v=20261111-2"></script>
+    <script src="js/vendor/lenis.min.js?v=20261111-2"></script>
+    <script src="js/main.js?v=20261111-2"></script>
 </body>
 </html>

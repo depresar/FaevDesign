@@ -150,6 +150,12 @@ document.querySelectorAll('.counter').forEach((el) => counterObserver.observe(el
 const header = document.getElementById('header');
 const heroBottom = document.querySelector('.hero__bottom');
 const speedEls = document.querySelectorAll('[data-speed]');
+const toTop = document.getElementById('toTop');
+
+toTop.addEventListener('click', () => {
+    if (lenis) lenis.scrollTo(0, { duration: 1.6 });
+    else window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+});
 const parallaxImgs = document.querySelectorAll('[data-parallax]');
 const marquees = [...document.querySelectorAll('[data-marquee]')].map((row) => {
     row.innerHTML += row.innerHTML; // дублируем содержимое для бесконечной прокрутки
@@ -166,6 +172,11 @@ function onFrame() {
 
     // Шапка: как только начинаем листать, у неё появляется тёмный фон
     header.classList.toggle('is-compact', y > 40);
+
+    // Кнопка «наверх»: видна после первого экрана, кольцо = доля пролистанной страницы
+    const maxScroll = document.documentElement.scrollHeight - vh;
+    toTop.classList.toggle('is-visible', y > vh * 0.8);
+    toTop.style.setProperty('--progress', maxScroll > 0 ? clamp(y / maxScroll, 0, 1).toFixed(4) : 0);
 
     if (!reduceMotion) {
         // Главный экран: подписи внизу растворяются, слои с data-speed отстают от скролла.

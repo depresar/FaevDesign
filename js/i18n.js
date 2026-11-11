@@ -178,6 +178,7 @@ const EN = {
 
     // Окно заявки
     'Закрыть': 'Close',
+    'Наверх': 'Back to top',
     'Ответьте на пару вопросов, чтобы я мог сориентировать вас по срокам и стоимости.':
         'Answer a couple of questions so I can estimate the timing and cost for you.',
     'Ваше имя': 'Your name',
