@@ -1247,6 +1247,14 @@ html.is-preloading {
     line-height: 1.25;
 }
 
+/* Широкая текстовая вставка рядом с одной карточкой */
+.works__note--wide {
+    grid-column: span 7;
+    justify-self: start;
+    max-width: 420px;
+    font-size: clamp(1.15rem, 1.5vw, 1.5rem);
+}
+
 .case__media {
     position: relative;
     overflow: hidden;
