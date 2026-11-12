@@ -2183,6 +2183,233 @@ html.is-preloading {
     color: var(--accent);
 }
 
+/* =========================================================
+   Вариант главного экрана (variant-hero.html)
+   ========================================================= */
+
+/* Шапка: стрелки вместо точек, счётчик кейсов — цифрой в скобках */
+.header--alt .header__links sup {
+    min-width: 0;
+    height: auto;
+    padding: 0;
+    margin-left: 3px;
+    background: none;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.header--alt .btn-head .arrow {
+    color: var(--accent);
+}
+
+.header--alt .btn-head--light:hover .arrow {
+    color: var(--white);
+}
+
+.header--alt .btn-head:hover .arrow {
+    transform: translate(2px, -2px);
+}
+
+/* Сетка «чертежа», растворяется к краям */
+.hero--alt .hero__grid {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-size: 72px 72px;
+    background-position: center center;
+    -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 45%, #000 20%, transparent 100%);
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 45%, #000 20%, transparent 100%);
+}
+
+/* Синий свет под курсором */
+.hero--alt .hero__spot {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 40%), rgba(var(--accent-rgb), 0.22), transparent 70%);
+    transition: opacity 0.6s;
+}
+
+/* Подпись над заголовком */
+.hero--alt .hero__eyebrow {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: clamp(110px, 13vh, 150px) 40px 0;
+    font-size: 0.85rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+    opacity: 0;
+    transition: opacity 1s 0.3s;
+}
+
+.is-loaded .hero--alt .hero__eyebrow {
+    opacity: 1;
+}
+
+/* Заголовок «лесенкой»: первая строка слева, вторая справа */
+.hero--alt .hero__title--split {
+    padding: 18px 40px 0;
+    text-align: left;
+}
+
+.hero--alt .hero__title--split .hero__accent {
+    text-align: right;
+}
+
+/* Бейдж — слева, напротив фото */
+.hero--alt .hero__badge {
+    left: 13%;
+    right: auto;
+    top: 58%;
+}
+
+/* Низ: навыки слева, «листайте» по центру, цифры справа */
+.hero--alt .hero__meta {
+    padding-top: 0;
+    align-items: flex-end;
+}
+
+.hero__skills {
+    list-style: none;
+    display: grid;
+    gap: 8px;
+    font-size: 1.05rem;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 1s 0.7s, transform 1.2s 0.7s var(--ease);
+}
+
+.hero__skills span {
+    display: inline-block;
+    width: 34px;
+    font-size: 0.8rem;
+    color: var(--accent);
+}
+
+.hero__stats {
+    display: flex;
+    gap: 34px;
+    text-align: right;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 1s 0.8s, transform 1.2s 0.8s var(--ease);
+}
+
+.hero__stats div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.hero__stats b {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: clamp(2.2rem, 3.4vw, 3.4rem);
+    line-height: 0.9;
+    letter-spacing: -0.05em;
+}
+
+.hero__stats span {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.is-loaded .hero__skills,
+.is-loaded .hero__stats {
+    opacity: 1;
+    transform: none;
+}
+
+.hero__scroll {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    translate: -50% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.hero__scroll i {
+    position: relative;
+    width: 1px;
+    height: 46px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.hero__scroll i::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 40%;
+    background: var(--accent);
+    animation: scrollCue 1.8s var(--ease) infinite;
+}
+
+@keyframes scrollCue {
+    from { transform: translateY(-100%); }
+    to   { transform: translateY(260%); }
+}
+
+@media (max-width: 768px) {
+    .hero--alt .hero__eyebrow {
+        justify-content: center;
+        padding: 92px 20px 0;
+        font-size: 0.7rem;
+    }
+
+    .hero--alt .hero__title--split {
+        padding: 12px 20px 0;
+        text-align: center;
+    }
+
+    .hero--alt .hero__title--split .hero__accent {
+        text-align: center;
+    }
+
+    .hero--alt .hero__badge {
+        top: auto;
+        left: auto;
+        margin: 10px 7% 0 auto;
+    }
+
+    .hero--alt .hero__grid {
+        background-size: 48px 48px;
+    }
+
+    .hero__skills,
+    .hero__scroll {
+        display: none;
+    }
+
+    .hero--alt .hero__meta {
+        justify-content: flex-end;
+    }
+
+    .hero__stats {
+        gap: 22px;
+    }
+
+    .hero__stats b {
+        font-size: 2rem;
+    }
+}
+
 /* Адаптив шапки и главного экрана */
 @media (max-width: 1100px) {
     .header__links {

@@ -152,6 +152,16 @@ const heroBottom = document.querySelector('.hero__bottom');
 const speedEls = document.querySelectorAll('[data-speed]');
 const toTop = document.getElementById('toTop');
 
+// Вариант главного экрана: синий свет следует за курсором
+const heroCard = document.getElementById('heroCard');
+if (heroCard && window.matchMedia('(hover: hover)').matches) {
+    heroCard.addEventListener('mousemove', (e) => {
+        const r = heroCard.getBoundingClientRect();
+        heroCard.style.setProperty('--mx', `${e.clientX - r.left}px`);
+        heroCard.style.setProperty('--my', `${e.clientY - r.top}px`);
+    });
+}
+
 toTop.addEventListener('click', () => {
     if (lenis) lenis.scrollTo(0, { duration: 1.6 });
     else window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
