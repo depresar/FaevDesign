@@ -2303,6 +2303,8 @@ html.is-preloading {
         display: flex;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
+        /* Отступ слева/справа как у текста — и при прокрутке, и у прилипания карточек */
+        scroll-padding-inline: var(--gutter);
         margin: 0 calc(var(--gutter) * -1);
         padding: 0 var(--gutter) 6px;
         scrollbar-width: none;
@@ -2310,6 +2312,12 @@ html.is-preloading {
 
     .wip__list::-webkit-scrollbar {
         display: none;
+    }
+
+    /* Пустое место после последней карточки (Safari не учитывает правый padding) */
+    .wip__list::after {
+        content: "";
+        flex: 0 0 1px;
     }
 
     .wip-card {
