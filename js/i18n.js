@@ -11,7 +11,7 @@
 const EN = {
     // Заголовок вкладки и описание для поисковиков
     'Faev Design — интернет-магазины и лендинги под ключ | Иван Фаев': 'Faev Design — online stores and landing pages, turnkey | Ivan Faev',
-    'Иван Фаев — веб-дизайнер. Делаю интернет‑магазины и лендинги под ключ: дизайн в Figma, сайты на Tilda (Zero Block) и других платформах, разработка на коде с Claude Code.': 'Ivan Faev — web designer. I build online stores and landing pages, turnkey: design in Figma, websites on Tilda (Zero Block) and other platforms, coded development with Claude Code.',
+    'Иван Фаев — веб-дизайнер. Делаю интернет-магазины и лендинги под ключ: дизайн в Figma, сайты на Tilda (Zero Block) и других платформах, разработка на коде с Claude Code.': 'Ivan Faev — web designer. I build online stores and landing pages, turnkey: design in Figma, websites on Tilda (Zero Block) and other platforms, coded development with Claude Code.',
 
     // Прелоадер и шапка
     'Веб-дизайн и разработка сайтов': 'Web design & development',
