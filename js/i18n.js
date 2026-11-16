@@ -10,9 +10,8 @@
 
 const EN = {
     // Заголовок вкладки и описание для поисковиков
-    'Faev Design — веб-дизайн и разработка сайтов | Иван Фаев': 'Faev Design — web design & website development | Ivan Faev',
-    'Иван Фаев — веб-дизайнер. Дизайн в Figma, сайты на Tilda (Zero Block) и любых других платформах, разработка на коде с Claude Code.':
-        'Ivan Faev — web designer. Design in Figma, websites on Tilda (Zero Block) and any other platform, coded development with Claude Code.',
+    'Faev Design — интернет-магазины и лендинги под ключ | Иван Фаев': 'Faev Design — online stores and landing pages, turnkey | Ivan Faev',
+    'Иван Фаев — веб-дизайнер. Делаю интернет‑магазины и лендинги под ключ: дизайн в Figma, сайты на Tilda (Zero Block) и других платформах, разработка на коде с Claude Code.': 'Ivan Faev — web designer. I build online stores and landing pages, turnkey: design in Figma, websites on Tilda (Zero Block) and other platforms, coded development with Claude Code.',
 
     // Прелоадер и шапка
     'Веб-дизайн и разработка сайтов': 'Web design & development',
@@ -27,8 +26,8 @@ const EN = {
     'Контакты': 'Contact',
 
     // Главный экран
-    'Сайты, которые': 'Websites that',
-    'работают и впечатляют': 'work and impress',
+    'Делаю интернет‑магазины': 'I build online stores',
+    'и лендинги под ключ': 'and landing pages',
     'Иван Фаев': 'Ivan Faev',
     'веб-дизайн • tilda zero block • figma • claude code • frontend •': 'web design • tilda zero block • figma • claude code • frontend •',
     'Автор': 'Author',
@@ -38,17 +37,14 @@ const EN = {
     'Открыт для проектов на 2026 год': 'Open for projects in 2026',
 
     // Манифест и цифры
-    'Я верю, что у каждого бизнеса есть свой характер и свой способ быть заметным. Поэтому проектирую чистые интерфейсы, рисую дизайн в Figma и собираю сайты на Tilda и в коде — так, чтобы они работали и впечатляли.':
-        'I believe every business has its own character and its own way to stand out. That’s why I design clean interfaces, craft layouts in Figma and build websites on Tilda and in code — so they work and impress.',
-    'Без лишнего шума и сложных решений. Сильная идея, аккуратный дизайн и внимание к тому, что действительно важно.':
-        'No unnecessary noise or overcomplicated solutions. A strong idea, careful design and attention to what really matters.',
+    'Делаю интернет‑магазины, лендинги и корпоративные сайты: от структуры и дизайна в Figma до готового сайта на Tilda или на коде. Беру проект целиком — не нужно искать отдельно дизайнера и разработчика.': 'I build online stores, landing pages and corporate websites: from structure and design in Figma to a finished site on Tilda or in code. I take the whole project — no need to look for a separate designer and developer.',
+    'Понятный процесс: бриф, структура, дизайн, вёрстка и запуск. На каждом этапе вы видите результат и можете внести правки.': 'A clear process: brief, structure, design, build and launch. At every stage you see the result and can request changes.',
     'Дизайн и вёрстка в одних руках': 'Design and build in one pair of hands',
     'Сам рисую макет в Figma и сам собираю его на Tilda или в коде — ничего не теряется при передаче между подрядчиками.':
         'I design the layout in Figma and build it myself on Tilda or in code — nothing gets lost between contractors.',
-    'лет в веб-дизайне и всё ещё интересно': 'years in web design and still loving it',
-    'Мне доверяют свои идеи': 'Clients trust me with their ideas',
-    'От лендинга, который нужно запустить быстро, до многостраничного сайта, где дизайн становится частью стратегии бизнеса.':
-        'From a landing page that needs to launch fast to a multi-page website where design becomes part of the business strategy.',
+    'лет в веб-дизайне': 'years in web design',
+    'От лендинга до магазина': 'From landing page to online store',
+    'Лендинг для рекламы или услуги, интернет-магазин с каталогом, корзиной и оплатой, корпоративный сайт компании.': 'A landing page for ads or a service, an online store with a catalogue, cart and payment, a corporate website.',
     'проектов запущено': 'projects launched',
 
     // В работе
@@ -73,11 +69,9 @@ const EN = {
     'Mugs & Kisses — фарфоровая посуда с росписью': 'Mugs & Kisses — hand-painted porcelain tableware',
 
     // Кейсы
-    'Создаю сайты, которые выделяются и продают': 'I build websites that stand out and sell',
-    'Подборка последних проектов: корпоративные сайты, лендинги и интернет-магазины. Наведите на проект, чтобы пролистать его первые экраны, и нажмите, чтобы открыть сайт. У каждого — своя идея, характер и визуальная система.':
-        'A selection of recent projects: corporate websites, landing pages and online stores. Hover over a project to scroll through its first screens, and click to open the site. Each one has its own idea, character and visual system.',
-    'Каждый проект начинается с идеи. Дальше я ищу правильную форму — через смысл, визуальный язык, структуру и детали.':
-        'Every project starts with an idea. Then I look for the right form — through meaning, visual language, structure and details.',
+    'Последние проекты': 'Recent projects',
+    'Интернет-магазины, лендинги и корпоративные сайты. Наведите на проект, чтобы пролистать его первые экраны, и нажмите, чтобы открыть сайт.': 'Online stores, landing pages and corporate websites. Hover over a project to scroll through its first screens, and click to open the site.',
+    'Каждый сайт делаю под задачу бизнеса: чтобы клиенту было удобно найти товар, понять предложение и оставить заявку.': 'Every site is built around the business goal: so that customers can easily find a product, understand the offer and get in touch.',
     'Год': 'Year',
     'ПРО.Дизайн Бюро': 'PRO.Design Bureau',
     '(студия дизайна интерьера)': '(interior design studio)',
@@ -124,14 +118,12 @@ const EN = {
     // Обо мне
     '(Обо мне)': '(About)',
     'Привет, я Иван Фаев': 'Hi, I’m Ivan Faev',
-    'Специализируюсь на продуманном веб-дизайне и вёрстке, проектирую интуитивно понятные и чистые интерфейсы.':
-        'I specialise in thoughtful web design and front-end build, creating clean and intuitive interfaces.',
+    'Я веб-дизайнер: делаю дизайн и вёрстку интернет-магазинов, лендингов и корпоративных сайтов.': 'I’m a web designer: I design and build online stores, landing pages and corporate websites.',
     'Собираю нестандартные проекты на Tilda, включая сложные анимации в Zero Block, CSS и JS, и разрабатываю сайты с помощью кода. Макеты рисую индивидуально в Figma под конкретные задачи бизнеса.':
         'I build non-standard projects on Tilda, including complex animations in Zero Block, CSS and JS, and develop websites in code. Every layout is designed in Figma around the specific goals of the business.',
     'В разработке активно работаю с Claude Code — AI-ассистентом для программирования. Он помогает быстрее собирать сайты на коде, сложные анимации и интеграции, а у меня остаётся больше времени на дизайн и детали.':
         'In development I work extensively with Claude Code, an AI coding assistant. It helps me build coded websites, complex animations and integrations faster, leaving more time for design and details.',
-    'Постоянно живу в разных странах — это даёт не просто насмотренность, а непрерывный поиск новых нестандартных решений.':
-        'I constantly live in different countries — it gives me not just a trained eye, but a never-ending search for fresh, unconventional solutions.',
+    'Работаю удалённо, на связи в Telegram и WhatsApp.': 'I work remotely and I’m available on Telegram and WhatsApp.',
 
     // Услуги
     '(Форматы работы)': '(Services)',
