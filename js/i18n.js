@@ -37,7 +37,7 @@ const EN = {
     'Открыт для проектов на 2026 год': 'Open for projects in 2026',
 
     // Манифест и цифры
-    'Делаю интернет‑магазины, лендинги и корпоративные сайты: от структуры и дизайна в Figma до готового сайта на Tilda или на коде. Беру проект целиком — не нужно искать отдельно дизайнера и разработчика.': 'I build online stores, landing pages and corporate websites: from structure and design in Figma to a finished site on Tilda or in code. I take the whole project — no need to look for a separate designer and developer.',
+    'Беру проект целиком: от структуры и дизайна в Figma до готового сайта на Tilda или на коде. Не нужно искать отдельно дизайнера и разработчика — всё делаю сам.': 'I take the whole project: from structure and design in Figma to a finished website on Tilda or in code. No need to look for a separate designer and developer — I do it all myself.',
     'Понятный процесс: бриф, структура, дизайн, вёрстка и запуск. На каждом этапе вы видите результат и можете внести правки.': 'A clear process: brief, structure, design, build and launch. At every stage you see the result and can request changes.',
     'Дизайн и вёрстка в одних руках': 'Design and build in one pair of hands',
     'Сам рисую макет в Figma и сам собираю его на Tilda или в коде — ничего не теряется при передаче между подрядчиками.':
