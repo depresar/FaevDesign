@@ -668,8 +668,8 @@ html.is-preloading {
     left: 50%;
     bottom: 0;
     z-index: 2;
-    height: 76%;
-    aspect-ratio: 2 / 3;
+    height: 72%;
+    aspect-ratio: 1100 / 1158; /* пропорции фото img/ivan-hero.webp */
     translate: -50% 0;
     will-change: transform;
 }
@@ -2248,7 +2248,8 @@ html.is-preloading {
     }
 
     .hero__person {
-        height: 66%;
+        width: 112%;
+        height: auto;
         bottom: 0;
     }
 
