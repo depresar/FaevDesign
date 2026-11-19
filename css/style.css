@@ -1001,7 +1001,7 @@ html.is-preloading {
 
 .wip__list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--gutter);
 }
 
@@ -1101,7 +1101,7 @@ html.is-preloading {
 .wip-card__name {
     font-family: var(--font-display);
     font-weight: 500;
-    font-size: 1.6rem;
+    font-size: 1.45rem;
     letter-spacing: -0.04em;
     line-height: 1.05;
 }
@@ -2296,6 +2296,16 @@ html.is-preloading {
 /* =========================================================
    Адаптив
    ========================================================= */
+
+@media (max-width: 1400px) and (min-width: 1101px) {
+    .wip__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .wip-card__media {
+        aspect-ratio: 16 / 9;
+    }
+}
 
 @media (max-width: 1100px) {
     /* Планшет и телефон: карточки «В работе» листаются вбок */

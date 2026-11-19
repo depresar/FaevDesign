@@ -64,6 +64,8 @@ const EN = {
     'Арт текстиль Ирины Уткиной': 'Irina Utkina Art Textile',
     'магазин шёлковых платков': 'silk scarves store',
     'фарфоровая посуда с росписью': 'hand-painted porcelain tableware',
+    'креативное ателье из Дубая': 'creative atelier from Dubai',
+    'CASAVISION — креативное ателье из Дубая': 'CASAVISION — creative atelier from Dubai',
     'mulifeyn — бренд фарфоровых украшений': 'mulifeyn — porcelain jewellery brand',
     'Арт текстиль Ирины Уткиной — магазин шёлковых платков': 'Irina Utkina Art Textile — silk scarves store',
     'Mugs & Kisses — фарфоровая посуда с росписью': 'Mugs & Kisses — hand-painted porcelain tableware',
