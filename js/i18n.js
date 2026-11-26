@@ -11,7 +11,7 @@
 const EN = {
     // Заголовок вкладки и описание для поисковиков
     'Faev Design — интернет-магазины и лендинги под ключ | Иван Фаев': 'Faev Design — online stores and landing pages, turnkey | Ivan Faev',
-    'Иван Фаев — веб-дизайнер. Делаю интернет-магазины и лендинги под ключ: дизайн в Figma, сайты на Tilda (Zero Block) и других платформах, разработка на коде с Claude Code.': 'Ivan Faev — web designer. I build online stores and landing pages, turnkey: design in Figma, websites on Tilda (Zero Block) and other platforms, coded development with Claude Code.',
+    'Иван Фаев — веб-дизайнер. Делаю интернет-магазины и лендинги под ключ: дизайн и разработка сразу в коде с Claude Code, сайты на Tilda (Zero Block) и других платформах, макеты в Figma — по запросу.': 'Ivan Faev — web designer. I build online stores and landing pages, turnkey: design and development straight in code with Claude Code, websites on Tilda (Zero Block) and other platforms, Figma mockups on request.',
 
     // Прелоадер и шапка
     'Веб-дизайн и разработка сайтов': 'Web design & development',
@@ -37,11 +37,10 @@ const EN = {
     'Открыт для проектов на 2026 год': 'Open for projects in 2026',
 
     // Манифест и цифры
-    'Беру проект целиком: от структуры и дизайна в Figma до готового сайта на Tilda или на коде. Не нужно искать отдельно дизайнера и разработчика — всё делаю сам.': 'I take the whole project: from structure and design in Figma to a finished website on Tilda or in code. No need to look for a separate designer and developer — I do it all myself.',
+    'Беру проект целиком: от структуры и дизайна до готового сайта. Чаще всего делаю дизайн сразу в коде — вы видите живой сайт, а не картинку. Не нужно искать отдельно дизайнера и разработчика — всё делаю сам.': 'I take the whole project: from structure and design to a finished website. Most often I design straight in code — you see a live site, not a picture. No need to look for a separate designer and developer — I do it all myself.',
     'Понятный процесс: бриф, структура, дизайн, вёрстка и запуск. На каждом этапе вы видите результат и можете внести правки.': 'A clear process: brief, structure, design, build and launch. At every stage you see the result and can request changes.',
     'Дизайн и вёрстка в одних руках': 'Design and build in one pair of hands',
-    'Сам рисую макет в Figma и сам собираю его на Tilda или в коде — ничего не теряется при передаче между подрядчиками.':
-        'I design the layout in Figma and build it myself on Tilda or in code — nothing gets lost between contractors.',
+    'Дизайн делаю сразу в коде, опираясь на опыт и насмотренность. Если нужно сначала согласовать макет — отрисую его в Figma.': 'I design straight in code, relying on experience and a trained eye. If you need to approve a mockup first, I’ll draw it in Figma.',
     'лет в веб-дизайне': 'years in web design',
     'От лендинга до магазина': 'From landing page to online store',
     'Лендинг для рекламы или услуги, интернет-магазин с каталогом, корзиной и оплатой, корпоративный сайт компании.': 'A landing page for ads or a service, an online store with a catalogue, cart and payment, a corporate website.',
@@ -121,10 +120,8 @@ const EN = {
     '(Обо мне)': '(About)',
     'Привет, я Иван Фаев': 'Hi, I’m Ivan Faev',
     'Я веб-дизайнер: делаю дизайн и вёрстку интернет-магазинов, лендингов и корпоративных сайтов.': 'I’m a web designer: I design and build online stores, landing pages and corporate websites.',
-    'Собираю нестандартные проекты на Tilda, включая сложные анимации в Zero Block, CSS и JS, и разрабатываю сайты с помощью кода. Макеты рисую индивидуально в Figma под конкретные задачи бизнеса.':
-        'I build non-standard projects on Tilda, including complex animations in Zero Block, CSS and JS, and develop websites in code. Every layout is designed in Figma around the specific goals of the business.',
-    'В разработке активно работаю с Claude Code — AI-ассистентом для программирования. Он помогает быстрее собирать сайты на коде, сложные анимации и интеграции, а у меня остаётся больше времени на дизайн и детали.':
-        'In development I work extensively with Claude Code, an AI coding assistant. It helps me build coded websites, complex animations and integrations faster, leaving more time for design and details.',
+    'Собираю нестандартные проекты на Tilda, включая сложные анимации в Zero Block, CSS и JS, и разрабатываю сайты с помощью кода. Работаю и в Figma: если проекту нужен отдельный макет, отрисую его по запросу.': 'I build non-standard projects on Tilda, including complex animations in Zero Block, CSS and JS, and develop websites in code. I also work in Figma: if a project needs a separate mockup, I’ll design it on request.',
+    'Основной инструмент — Claude Code, AI-ассистент для программирования. Собираю дизайн сразу в коде: ставлю задачу, а опыт и насмотренность помогают быстро прийти к нужному результату. Сайт с анимациями и интеграциями готов быстрее, а правки видны сразу на живой странице.': 'My main tool is Claude Code, an AI coding assistant. I build the design straight in code: I set the task, and experience and a trained eye help me get to the right result fast. A site with animations and integrations is ready sooner, and changes show up right on the live page.',
     'Работаю удалённо, на связи в Telegram и WhatsApp.': 'I work remotely and I’m available on Telegram and WhatsApp.',
 
     // Услуги
@@ -132,9 +129,9 @@ const EN = {
     'Что я могу для вас сделать': 'What I can do for you',
     'UI/UX дизайн': 'UI/UX design',
     'Проектирование логики': 'User flows and logic',
-    'Индивидуальный дизайн в Figma': 'Custom design in Figma',
+    'Дизайн сразу в коде или в Figma': 'Design straight in code or in Figma',
     'Десктоп и мобильная версии': 'Desktop and mobile versions',
-    'Подготовка макетов к вёрстке': 'Developer-ready layouts',
+    'Макет в Figma — по запросу': 'Figma mockup on request',
     'Вёрстка на Tilda / кодинг': 'Tilda build / coding',
     'Перенос дизайна на платформу': 'Moving the design to the platform',
     'Сложная анимация (Zero Block)': 'Complex animation (Zero Block)',
@@ -153,8 +150,10 @@ const EN = {
     '(Вопросы)': '(FAQ)',
     'Частые вопросы': 'Frequently asked questions',
     'Как происходит оплата?': 'How does payment work?',
-    'Работа делится на этапы. Обычно это предоплата 50% перед началом работы над дизайном и оставшиеся 50% после утверждения макетов — перед вёрсткой или сдачей готового проекта.':
-        'The work is split into stages. Usually it’s a 50% prepayment before the design starts and the remaining 50% once the layouts are approved — before development or delivery of the finished project.',
+    'Работа делится на этапы. Обычно это предоплата 50% перед началом работы и оставшиеся 50% после согласования дизайна или при сдаче готового проекта.': 'The work is split into stages. Usually it’s a 50% prepayment before the work starts and the remaining 50% once the design is approved or when the finished project is delivered.',
+    'Будет ли макет в Figma?': 'Will there be a Figma mockup?',
+    'По запросу — да. Обычно я делаю дизайн сразу в коде: вы смотрите живой сайт в браузере и на телефоне и даёте правки. Если нужно сначала утвердить картинку или передать макет другой команде, отрисую дизайн в Figma.':
+        'Yes, on request. Usually I design straight in code: you look at the live site in a browser and on your phone and give feedback. If you need to approve a picture first or hand a mockup to another team, I’ll design it in Figma.',
     'Сколько времени занимает разработка?': 'How long does development take?',
     'Всё зависит от сложности задачи. Лендинг в среднем занимает от 7 до 14 дней. Многостраничный корпоративный сайт — от 3 до 5 недель с учётом всех согласований.':
         'It depends on the complexity. A landing page usually takes 7 to 14 days. A multi-page corporate website takes 3 to 5 weeks, including all approvals.',
